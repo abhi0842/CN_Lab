@@ -1,0 +1,258 @@
+
+table{
+    border: 1px solid black;
+    display: inline-block;
+    margin:40px 40px;
+    border-radius: 10px;
+    
+}
+
+
+.c1{
+    padding-top: 10px;
+    padding-left: 70px;
+}
+
+.c2{
+    padding-left: 140px;
+}
+.c3{
+    padding-top: 10px;
+    padding-right: 50px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .c2{
+        padding-left: 90px;
+    }
+    .ins{
+        border-radius: 4px;
+         position: absolute;
+        right: 60px !important; 
+    }
+  }
+
+
+  @media only screen and (max-width: 1235px) {
+    .c1{
+        padding-left: 30px;
+    }
+    
+.c2{
+    padding-left: 30px;
+}
+.c3{
+    padding-right: 30px;
+}
+.ins{
+    border-radius: 4px;
+     position: absolute;
+    right: 20px !important; 
+}
+
+    
+  }
+
+
+  @media only screen and (max-width: 1030px) {
+    .c1{
+        margin-left: 35%;
+    }
+    
+.c2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.c3{
+  
+    margin-left: 35%;
+    
+}
+table{
+    margin-left: 35%;
+}
+.ins{
+    border-radius: 4px;
+     position: absolute;
+    right: 20px !important; 
+}
+
+    
+  }
+
+
+  @media only screen and (max-width: 620px) {
+    .c1{
+        margin-left: 35%;
+    }
+    
+.c2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.c3{
+  
+    margin-left: 35%;
+    
+}
+table{
+    margin-left: 35%;
+}
+.headd{
+    right: 5px;
+}
+.ins{
+    border-radius: 4px;
+     position: absolute;
+    right: 10px !important; 
+}
+    
+  }
+
+
+
+  @media only screen and (max-width: 520px) {
+    .c1{
+        margin-left: 30%;
+    }
+    
+.c2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.c3{
+  
+    margin-left: 30%;
+    
+}
+table{
+    margin-left: 30%;
+}
+.headd{
+    right: 0px;
+}
+    
+  }
+
+
+  
+  @media only screen and (max-width: 390px) {
+    .c1{
+        margin-left: 25%;
+    }
+    
+.c2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.c3{
+  
+    margin-left: 25%;
+    
+}
+table{
+    margin-left: 25%;
+}
+.headd{
+    right: 0px;
+    display: block;
+    left: 260px;
+    padding-right: 3rem;
+}
+.logo{
+    display: block;
+}
+.ins{
+    border-radius: 4px;
+     position: absolute;
+    right: 5px !important; 
+    top:120px;
+}
+    
+  }
+
+  @media only screen and (max-width: 310px) {
+    .c1{
+        margin-left: 25%;
+    }
+    
+.c2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.c3{
+  
+    margin-left: 25%;
+    
+}
+table{
+    margin-left: 25%;
+}
+.headd{
+    right: 0px;
+    display: block;
+    top: 15px;
+    left: 190px;
+    padding-right: 3rem;
+}
+.logo{
+    display: block;
+}
+    
+  }
+
+
+  @media only screen and (min-width: 1700px) {
+  
+    .c1{
+        padding-left: 30px;
+    }
+    
+.c2{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+.c3{
+    padding-right: 20px;
+}
+    
+  }
+
+  @media only screen and (min-width: 1900px) {
+   
+    .c1{
+        padding-left: 30px;
+    }
+    
+.c2{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+.c3{
+    padding-right: 30px;
+}
+    
+  }
+
+  @media only screen and (min-width: 2300px) {
+    .c1{
+        padding-left: 3opx;
+    }
+    
+.c2{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+.c3{
+    padding-right: 35px;
+}
+    
+  }

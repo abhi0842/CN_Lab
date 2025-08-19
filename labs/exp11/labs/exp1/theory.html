@@ -1,0 +1,392 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script>
+            window.onload = function () {
+                document.getElementById("theory").className = "active treeview";
+            }
+        </script>
+        <style>
+          #toggle_nav:hover{
+            background-color: #1261A0;
+          }
+          #theory{
+            background-color: #009dff;
+          }
+          #aim:hover,#theory:hover,#pretest:hover,#procedure:hover,#simulation:hover,#result:hover,#posttest:hover,#references:hover,#contributors:hover{
+            background-color: #009dff;
+          }
+        </style>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      
+    </div>
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo" style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:0.8em; color: white;"><b><!-- Lab Name --> Computer Network Lab</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i><!-- Lab Name --> Computer Network Lab</a>
+              </li>
+              <li>
+                <a href="#"><!-- Write your experiment name in Title case -->Circuit Switching: Setup, Transmission, and Teardown </a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color:#1261A0;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" style="background-color:#1261A0;">
+                <li class="treeview" id="aim">
+                    <a href="index.html" id="aim">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" id="theory" onclick="theory()">
+                        <i class="fa fa-files-o" style="color:white;"></i>
+                        <span style="color:white;">Theory</span>
+                    </a>
+                </li>
+        
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html" id="pretest">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html" id="procedure">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html" id="simulation">
+                        <i class="fa fa-laptop" style="color:white;"></i>
+                        <span style="color:white;">Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html" id="posttest">
+                        <i class=" fa fa-files-o" style="color:white;">
+                    </i>
+                    <span style="color:white;">Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+
+                <li class="treeview" id="cont">
+                  <a href="contributors.html" id="contributors">
+                      <i class="fa fa-files-o" style="color:white;"></i>
+                      <span style="color:white;">Contributors</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+
+                <li class="treeview" id="ref">
+                    <a href="references.html" id="references">
+                        <i class="fa fa-files-o" style="color:white;"></i>
+                        <span style="color:white;">References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                 <!-- Write your experiment name in Title case --> Circuit Switching: Setup, Transmission, and Teardown
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                        <style>
+                          
+                          p{
+                              text-align: justify; font-size: 1.8rem;
+                          }
+                          figcaption
+                          {
+                            font-size: 16px;
+                          }
+
+                        </style>
+                    
+                    <p style="margin-top:3%;">
+                        <h2>Introduction</h2>
+                        <p>
+                          
+                         <p>Circuit Switching is a communication method where a dedicated communication path (circuit) is created between the sender and receiver before any data is sent.
+                          This circuit stays active for the entire duration of the communication and is released only after the communication ends.</p><br>
+
+                            <p>The telephone system network is one of the examples of Circuit switching. 
+                                FDM (Frequency Division Multiplexing) and TDM (Time Division Multiplexing) are two methods of multiplexing multiple signals into a single carrier. </p>
+                              <p><ul  style="text-align: justify; font-size: 1.8rem;">
+                                <li> <b>Frequency Division Multiplexing (FDM):</b> It is used when multiple data signals are combined for simultaneous transmission via a shared communication medium. It is a technique by which the total bandwidth is divided into a series of non-overlapping frequency sub-bands, where each sub-band carries different signal.
+                                   Practical use in radio spectrum & optical fiber to share multiple independent signals.</li> <br>
+                                   <li> <b>Time Division Multiplexing (TDM):</b> It is a method of transmitting and receiving independent signals over a common signal path using synchronized switches at each end of the transmission line.
+                                     TDM is used for long-distance communication links and bears heavy data traffic loads from the end user.
+                                     TDM is also known as a digital circuit switch.</li>
+                              </ul></p>
+
+
+                        <center>
+                          <img src="D:\vlab-template\labs\exp1\images\circuit switching.png" alt="Circuit Switching" width="500";height="400">
+                          <figcaption style="font-weight: bold;"> Fig. 1 Visual Representation of Circuit Switching</figcaption>
+                       </center>
+
+                       <br>
+
+                       <p><h3><b>Phases of Circuit Switching </b></h3></p>
+                        <p> <ol style="text-align: justify; font-size: 1.8rem;">
+                           <li> <b>Circuit Establishment:</b></li>A dedicated circuit between the source and destination is constructed via a number of intermediary switching center's. 
+                          Communication signals can be requested and received when the sender and receiver communicate signals over the circuit.
+                        <li> <b>Data Transfer:</b></li>Data can be transferred between the source and destination once the circuit has been established.
+                         The link between the two parties remains as long as they communicate.
+                         <li> <b>Circuit Disconnection:</b> </li>Disconnection in the circuit occurs when one of the users initiates the disconnect. 
+                         When the disconnection occurs, all intermediary linkages between the sender and receiver are terminated.
+                        </ol> </p>
+
+                        <h3> <b>Switch</b></h3>
+                        <p>In computer networking, a switch is a device that connects multiple devices together within a local area network (LAN) and allows them to communicate with each other by forwarding data packets. </p>
+                          <center>
+                          <img src="images\switch.png" alt="Switch" width="500" >
+                          <figcaption style="font-weight: bold;"> Fig. 2 Switch Device </figcaption>
+                       </center>
+
+                       <h3><b>Working of Switch</b></h3>
+                       <p><ol style="text-align: justify; font-size: 1.8rem;">
+                        <li> <b>Receiving data:</b> When a device sends data, it's encapsulated in a frame with a destination MAC address.</li>
+                        <li> <b>Examining the address:</b>The switch receives the frame and examines the destination MAC address.</li>
+                        <li> <b>Looking up the address:</b>The switch consults its internal <b>MAC address table</b> to find the corresponding port for the destination device.
+                        <li> <b>Forwarding the data:</b>If the destination is found, the switch forwards the frame only to that specific port.</li>
+                        <li> <b>Building the table:</b> Initially, the switch may not know all MAC addresses It learns them by observing traffic and adding them to its table.</li>
+                        <li> <b>Handling unknown destinations:</b> If the destination MAC address is not in the table, the switch will forward the frame to all ports (broadcast) to try and locate it, but will then update its table.</li> 
+                        </ol></p>
+
+                        <p>Example of Switch Operation:</p>
+                        <ol style="text-align: justify; font-size: 1.8rem;">
+                          <li>Device A (MAC Address 00-14-22-01-23-45) sends a frame to Device B.</li>
+                          <li>The switch receives the frame on Port 1 and logs “00-14-22-01-23-45” to the MAC Address Table under Port 1.</li>
+                          <li>When Device B responds, its MAC address is similarly logged under Port 2.</li>
+                          <li>Future communication between Device A and Device B occurs directly between Ports 1 and 2 without unnecessary broadcasting.</li>
+                         </ol>
+
+                        <h3> <b>MAC Address</b></h3>
+                        <P>
+                          MAC stands for Media Access Control it is a physical address that uniquely identifies a device and hardware 
+                          manufacturer on a network. <br>
+                          <center>
+                            <img src="images\mac.jpg" alt="MAC Address"  width="400">
+                            <figcaption style="font-weight: bold;">Fig. 3 Representation of MAC</figcaption>
+                          </center>
+                          </P>
+                          <p>
+                          
+                          A MAC Address is a 12-digit hexadecimal number (48-bit binary number), 
+                          which is mostly represented by Colon-Hexadecimal notation.<br>
+                          MAC address can be represented using any of the following formats:
+                        </P>
+
+                        <center>
+                            <img src="images\mac-notation.jpg" alt="MAC Address"  width="400">
+                            <figcaption style="font-weight: bold;">Fig. 4 Format of MAC Address</figcaption>
+                          </center>
+                       <br>
+
+
+
+
+
+                        <h3> <b> MAC Address Table </b></h3>
+                        <p>A MAC address table, also known as a CAM (Content Addressable Memory) table is where the switch stores information about the other Ethernet interfaces to which it is connected on a network. 
+                          The table enables the switch to send outgoing data (Ethernet frames) on the specific port required to reach its destination, instead of broadcasting the data on all ports (flooding). </p>
+                          <br>
+                          <p>The MAC address table can contain two types of entries:</p>
+                          <p>
+                            <ul style="text-align: justify; font-size: 1.8rem;"> 
+                              <li><b>Static:</b> Static entries are manually added to the table by a switch administrator. Static entries have higher priority than dynamic entries. 
+                              Static entries remain active until they are removed by the switch administrator.</li>
+                              <br>
+                             <li><b>Dynamic: </b>Dynamic entries are automatically added to the table through a process called MAC learning, in which the switch retrieves the source MAC address (and VLAN ID, if present) of each Ethernet frame received on a port. 
+                            If the retrieved address does not exist in the table, it is added. Dynamic entries remain in the table for a predetermined amount of time (defined with the command mac-address-table age-time), after which they are automatically deleted.</li>
+                            </ul>
+                          </p>
+
+                            <center>
+                            <img src="images\cam-table.png" alt="MAC Address Table"  width="500">
+                            <figcaption style="font-weight: bold;">Fig. 5 MAC/CAM Address Table</figcaption>
+                          </center>
+                       <br>
+                          </p>
+
+                       <h3> <b>How a MAC Address Table Works</b></h3>
+                       <ol style="text-align: justify; font-size: 1.8rem;">
+                        <li><b>Learning:</b> learns MAC addresses by checking the source MAC of incoming frames.</li>
+                        <li><b>Forwarding:</b> Uses the MAC table to send frames to the correct port.</li>
+                        <li><b>Aging: </b>If a MAC address isn't seen for a while, it's removed from the table (to keep it updated).</li>
+                       </ol>
+                         
+                       <h3><b>Applications of Circuit Switching</b></h3>
+
+                       <ol style="text-align: justify; font-size: 1.8rem;">
+                        <li><b>Telephone networks: </b>For real-time voice calls with dedicated lines.</li>
+                        <li><b>Integrated Services Digital Network (ISDN): </b>For voice and data transmission over digital lines.</li>
+                        <li><b>Leased lines: </b>Used by businesses for secure, fixed communication.</li>
+                        <li><b>Emergency systems: </b>Ensures uninterrupted communication during crises.</li>
+                        <li><b>Old LANs: </b>Used in earlier local networks for direct device connections.</li>
+                       </ol>
+
+                        <h3><b>Advantages of Circuit Switching</b></h3>
+                         <ul style="text-align: justify; font-size: 1.8rem;">
+                          <li>Good for voice and video calls.</li>
+                          <li>No delay once the path is made.</li>
+                          <li>Data arrives in the correct order.</li>
+                         </ul>
+
+                         <h3> <b>Disadvantages of Circuit Switching </b></h3>
+                          <ul style="text-align: justify; font-size: 1.8rem;">
+                            <li>Wastes resources if no data is being sent.</li>
+                            <li>Takes time to set up the connection.</li>
+                            <li>Not ideal for internet or short data messages.</li>
+                          </ul>
+
+                         <h3><b>Difference between Circuit Switching and Packet Switching</b></h3>
+                         <center>
+                         <table border="8px"style="width:80%">
+                        <tr>
+                              <th width="80" style="text-align: center;">S.No.</th>
+                              <th style="text-align: center;"> Circuit Switching</th>
+                              <th style="text-align: center;"> Packet Switching</th>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center;">1.</td>
+                            <td>  Circuit Switching is a method of communication where a dedicated path (or circuit) is created between two devices before they start exchanging data.
+                                This path remains active and reserved only for them until their communication is over.</td> 
+                            <td>  Packet switching is a communication method where data is divided into smaller units called packets and transmitted over the network. 
+                                  Each packet contains the source and destination addresses, as well as other information needed for routing.</td> 
+                        </tr>
+
+                        <tr>
+                                  <td style="text-align: center;">2.</td>
+                                  <td> Circuit switching is more reliable. </td>
+                                  <td> Packet switching is less reliable. </td>
+                        </tr> 
+
+                        <tr>
+                                  <td style="text-align: center;">3.</td>
+                                  <td> Wastage of resources is more in Circuit Switching. </td> 
+                                  <td> Less wastage of resources as compared to Circuit Switching.  </td>
+                        </tr>   
+
+                        <tr>     
+                                  <td style="text-align: center;">4.</td>
+                                  <td> In-Circuit Switching there is a physical path between the source and the destination.</td>
+                                  <td> In Packet Switching there is no physical path between the source and the destination.</td>
+                        </tr>
+                          
+                        <tr>
+                          <td style="text-align: center;">5.</td>
+                          <td>eg: landline calls</td>
+                          <td>eg: E-mail send</td>
+                        </tr>
+                         </table>
+                         </center>
+
+
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by IIT Roorkee <!-- Institute Name --> </h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+<script>
+ function theory(){
+   document.getElementById("theory").style.backgroundColor = "#009dff";
+ 
+ }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

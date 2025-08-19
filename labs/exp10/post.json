@@ -1,0 +1,105 @@
+{
+    "PostTest": [
+      {
+        "question": "Which of the following best describes the Two-Tier Client-Server Architecture?",
+        "options": [
+          "a) Client and server communicate through a middleware layer.",
+          "b) The client communicates directly with the server without an intermediary.",
+          "c) The client communicates through multiple server layers.",
+          "d) The client and server are connected through a message queue."
+        ],
+        "answer": "b) The client communicates directly with the server without an intermediary."
+      },
+      {
+        "question": "In a Two-Tier architecture, which component is responsible for handling the application logic?",
+        "options": [
+          "a) Client",
+          "b) Server",
+          "c) Middleware",
+          "d) Database"
+        ],
+        "answer": "b) Server"
+      },
+      {
+        "question": "Which of the following is a limitation of the Two-Tier architecture?",
+        "options": [
+          "a) Scalability",
+          "b) Data security",
+          "c) Simplicity",
+          "d) Performance"
+        ],
+        "answer": "a) Scalability"
+      },
+      {
+        "question": "In Two-Tier architecture, what role does the client typically play?",
+        "options": [
+          "a) Provides business logic",
+          "b) Manages the database",
+          "c) Displays user interface and sends requests",
+          "d) Handles data processing"
+        ],
+        "answer": "c) Displays user interface and sends requests"
+      },
+      {
+        "question": "Which technology is commonly used for implementing the client in a Two-Tier architecture?",
+        "options": [
+          "a) Web server",
+          "b) Database server",
+          "c) Desktop application",
+          "d) Application server"
+        ],
+        "answer": "c) Desktop application"
+      },
+      {
+        "question": "Which layer is responsible for handling data processing in the Three-Tier architecture?",
+        "options": [
+          "a) Presentation layer",
+          "b) Application layer",
+          "c) Data layer",
+          "d) Network layer"
+        ],
+        "answer": "b) Application layer"
+      },
+      {
+        "question": "What is the primary advantage of using a Three-Tier architecture over a Two-Tier architecture?",
+        "options": [
+          "a) Increased complexity",
+          "b) Better scalability and maintainability",
+          "c) Faster client response time",
+          "d) Reduced security"
+        ],
+        "answer": "b) Better scalability and maintainability"
+      },
+      {
+        "question": "In a Three-Tier architecture, which layer is responsible for interacting with the database?",
+        "options": [
+          "a) Presentation layer",
+          "b) Business logic layer",
+          "c) Data access layer",
+          "d) Client layer"
+        ],
+        "answer": "c) Data access layer"
+      },
+      {
+        "question": "Which of the following technologies is typically used for the Application layer in a Three-Tier architecture?",
+        "options": [
+          "a) HTML/CSS",
+          "b) JavaScript",
+          "c) Java EE or .NET",
+          "d) SQL"
+        ],
+        "answer": "c) Java EE or .NET"
+      },
+      {
+        "question": "In a Three-Tier architecture, which layer handles user interactions and displays data?",
+        "options": [
+          "a) Application layer",
+          "b) Data access layer",
+          "c) Presentation layer",
+          "d) Business logic layer"
+        ],
+        "answer": "c) Presentation layer"
+      }
+    ]
+  }
+  

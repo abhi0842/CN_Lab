@@ -1,0 +1,393 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="bootstrap2.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+            </div>
+            <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+                height: 50px;
+                width: 400px;"></span></a>
+           
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo" style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          ">
+        <p align="center" style="font-size: 1em; color: white">
+          <b>Computer Network</b>
+        </p>
+      </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network<!-- Write your lab name --></a>
+                        </li>
+                        <li>
+                            <a href="#">GO-BACK-N ARQ<!-- Write your experiment name --></a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="posttest.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="reference.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="contri">
+                        <a href="contributors.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Contributors</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                   Implementation of Go-Back-N ARQ Flow Control Protocol
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+
+                <div style="text-align: justify;font-size:1.2em">
+                 
+                    <h3 id="introduction">Introduction</h3>
+<div style="text-align:justify">
+
+Flow Control is a set of procedures for the Data Link Layer that controls the flow of data between the sender and the receiver. It allows two stations working at different speeds to communicate with each other. It is a set of measures taken to regulate the data that the Sender sends to receiver, so that no problem is faced if the Sender sends data at higher rate and receiver is too slow to support that data rate.To solve the above problem, FLOW CONTROL is introduced in Data Link Layer. It tells the sender how much data should be sent to the receiver so that the data is not lost. The main concept of Flow Control is to introduce EFFICIENCY in Computer Networks. To help in it, there are various flow control protocols which are classified as:- 
+
+<center><br>
+<img src="images/flowchart.png" alt="">
+<figcaption><strong>Fig. 1 Flow Control Protocols</strong></figcaption>
+</center><br>
+
+The protocols in the first category cannot be used in real life, but they serve as a basis for understanding the protocols of noisy channels.<br>
+All the protocols we will discuss are unidirectional in the sense that the data frames travel from one node, called the sender, to another node, called the receiver. 
+Although special frames, called acknowledgment (ACK) and negative acknowledgment (NAK) can flow in the opposite direction for flow and error control purposes, data flow in only one direction. 
+In a real-life network, the data link protocols are implemented as bidirectional; data flow in both directions. In these protocols the flow and error control information such as ACKs and NAKs is included in the data frames in a technique called piggybacking. 
+Because bidirectional protocols are more complex than unidirectional ones, we chose the latter for our discussion.<br>
+
+<h3>Go Back N Protocol</h3>
+
+It is a specific instance of the automatic repeat request (ARQ) protocol. The sender sends a specific number of frames called “Window Size”. 
+<br><br>
+
+<b>The three main characteristic features of GBN are: </b><br>
+
+<ol>
+    <li>Sender Window Size (WS) : 
+    It is N itself. If we say the protocol is GB10, then Ws = 10. N should be always greater than 1 in order to implement pipelining. For N = 1, it reduces to Stop and Wait protocol.</li>
+    <li>Receiver Window Size (WR) : 
+        WR is always 1 in GBN. 
+    </li>
+    <li>Acknowledgements :<br> 
+
+        There are 2 kinds of acknowledgements namely:<br>
+        <ul>
+            <li>Cumulative ACK : One acknowledgement is used for many packets. The main advantage is traffic is less. A disadvantage is less reliability as if one ack is the loss that would mean that all the packets sent are lost. </li>
+            <li>Independent ACK : If every packet is going to get acknowledgement independently. Reliability is high here but a disadvantage is that traffic is also high since for every packet we are receiving independent ack.</li>
+        </ul> </li>
+</ol>
+
+<br>
+
+<center>
+<img src="images/ACK.png" alt=""><br>
+<figcaption><strong>Fig. 2 Types of acknowledgements</strong> </figcaption>
+</center>
+<br>
+
+<h3>Working of Go-Back-N ARQ</h3>
+
+This protocol involves the following transitions − 
+
+<ul>
+    <li>A sender sends multiple frames as allowed by the window size.</li>
+    <li>Receiver sends ACK for every valid frame received.</li>
+    <li>Once the sender receives the acknowledgement of one frame, the next frame in the queue is sent.</li>
+    <li>If the ACK does not reach the sender before a certain time, known as the timeout, then all the frames in the current window are retransmitted.</li>
+</ul>
+<br> 
+
+Consider the diagram (fig. 3) given below. We have sender window size of 4. Assume that we have lots of sequence numbers just for the sake of explanation. 
+Now the sender has sent the packets 0, 1, 2 and 3. After acknowledging packets 0 and 1, the receiver is now expecting packet 2, and the sender window has also slid to further transmit packets 4 and 5.
+ Now suppose the packet 2 is lost in the network, 
+Receiver will discard all the packets which sender has transmitted after packet 2 as it is expecting sequence number of 2. 
+On the sender side for every packet send there is a time out timer which will expire for packet number 2. 
+Now from the last transmitted packet 5 sender will go back to the packet number 2 in the current window and transmit all the packets till packet number 5. 
+That’s why it is called Go Back N. Go back means sender has to go back N places from the last transmitted packet in the unacknowledged window and not from the point where the packet is lost.
+<br><br>
+<center>
+<img src="images/GBN.png" alt="">
+<figcaption><strong>Fig. 3 Working of Go-Back-N ARQ</strong> </figcaption>
+</center>
+<br>
+
+<h4>Sequence Numbers</h4>
+In the Go-Back-N Protocol, the sequence numbers are modulo 2<sup>m</sup>, where m is the size of the sequence number field in bits.<br>
+<strong>For example,</strong> if m is 4, the only sequence numbers are 0 through 15 inclusive. However, we can repeat the sequence. So the sequence numbers are<br>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...<br>
+<br>
+<h4>Window size</h4>
+In Go-Back-N ARQ, the size of the send window must be less than 2<sup>m</sup>;the size of the receiver window is always 1.<br>
+
+<br>
+<h4>Why window size &lt; 2<sup>m</sup> ?</h4>
+As an example, we choose m = 2, which means the size of the window can be 2<sup>m</sup>- 1, or 3.<br>
+Fig. 4 compares a window size of 3 against a window size of 4. 
+If the size of the window is 3 (less than 2<sup>2</sup>) and all three acknowledgments are lost, 
+the frame timer expires and all three frames are resent. 
+The receiver is now expecting frame 3, not frame 0, so the duplicate frame is correctly discarded. 
+On the other hand, if the size of the window is 4 (equal to 2<sup>2</sup>) and all acknowledgments are lost, the sender will send a duplicate of frame 0. 
+However, this time the window of the receiver expects to receive frame 0, so it accepts frame 0, not as a duplicate, but as the first frame in the next cycle. This is an error.<br>
+
+S<sub>f</sub> - send window, the first outstanding frame.<br>
+S<sub>n</sub> - send window, the next frame to be sent.<br>
+R<sub>n</sub> - Only a frame with a sequence number matching the value of R<sub>n</sub> is accepted and acknowledged.<br>
+<center>
+<img src="images/correct.png" alt="">  <img src="images/error.png" alt="">
+<figcaption><strong>Fig. 4 Window size for GBN</strong> </figcaption>
+</center><br>
+
+<h4>Few Terminologies :</h4>
+
+<ol>
+    <li>
+        Transmission Delay (T<sub>t</sub>) : Time to transmit the packet from host to the outgoing link.<br>  
+
+        <center style="font-size: 22px;">
+        <math>
+            <mrow>
+                <msub>
+                    <mi>T</mi>
+                    <mn>t</mn>
+                </msub>
+                <mo>=</mo>
+                <mfrac>
+                    <mi>D</mi>
+                    <mi>B</mi>
+                </mfrac>
+            </mrow>
+        </math>
+
+     </center>
+
+     where,<br>
+     <ul>
+        <li>D : Data Size to transmit,</li>
+        <li>B : Bandwidth of the link.</li>
+     </ul>
+ 
+     <br>
+    </li>
+
+    <li>
+        Propagation Delay (T<sub>p</sub>) : It is the time taken by the first bit transferred by the host onto the outgoing link to reach the destination. 
+
+        <center style="font-size: 22px;">
+            <math>
+                <mrow>
+                    <msub>
+                        <mi>T</mi>
+                        <mn>p</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mi>d</mi>
+                        <mi>s</mi>
+                    </mfrac>
+                </mrow>
+            </math>
+
+         </center>
+         where,<br>
+         <ul>
+            <li>d : distance,</li>
+            <li>s : the wave propagation speed (depends on the characteristics of the medium).</li>
+         </ul>
+     
+     <br>
+
+    </li>
+
+    <li>
+        Efficiency of GBN (η)   
+        <center style="font-size: 22px;">
+            <math>
+                <mrow>
+                        <mi>η</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mi>Sender Window Size in Protocol</mi>
+                        <mi>(1 + 2a)</mi>
+                    </mfrac>
+                </mrow>
+            </math>
+<br><br>
+<math>
+    <mrow>
+            <mi>η</mi>
+        <mo>=</mo>
+        <mfrac>
+            <mi>N</mi>
+            <mi>(1 + 2a)</mi>
+        </mfrac>
+    </mrow>
+</math>
+         </center>
+         where,<br>   
+         
+            <math style="margin-left:50px;font-size:20px">
+                <mrow>
+                        <mi>a</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                     
+                            <mi>Propagation delay</mi>
+                            <mi>Transmission delay</mi>
+                    </mfrac>
+                </mrow>
+            </math>  
+       
+
+
+        <br> 
+
+             
+    </li>
+</ol>
+
+
+<h3>Advantages</h3>
+<ul>
+    <li>It can send multiple frames at once.</li>
+    <li>Pipelining is present in the Go-Back-N ARQ i.e. a frame can be sent by the sender before receiving the acknowledgment of the previously sent frame. This results in a lesser waiting time for the frame. </li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+    <li>If acknowledgment for a frame is not received, the whole window of frames is retransmitted instead of just the corrupted frame. This makes the Go Back N ARQ protocol inefficient. </li>
+    <li>Retransmission of all the frames on detecting a corrupted frame increases channel congestion and also increases the bandwidth requirement.</li>
+    <li>It is more time-consuming because while retransmitting the frames on detecting a corrupted frame, the error-free frames are also transmitted.</li>
+</ul>
+<br>
+</div>
+
+
+
+                                   </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by IITR, Roorkee</h4>
+        </footer>
+        <!-- /.control-sidebar -->
+    </div>
+</body>
+
+</html>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

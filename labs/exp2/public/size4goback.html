@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/p5.js"></script>
+    <script src="js/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sim.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <meta charset="utf-8">
+     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+</head>
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+<style>
+    #align {
+        position: absolute;
+        margin-top: 1.6%;
+        right: 17%;
+        border: 2px;
+        border-style:solid;
+        border-color: black;
+    }
+</style>
+
+<body>
+    <div class="box" id="boxx" style="position: absolute;height:880px">
+  
+   
+           <div class="title">
+            <h2>Flow Control: Go-Back-N ARQ</h2> 
+           </div>
+           <div id="align" class="btn-group">
+            <button style="float: right" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Window Size</b>
+                   </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="index.html">3</a>
+                <a class="dropdown-item" href="size4goback.html">4</a>
+                <a class="dropdown-item" href="size5goback.html">5</a>
+    
+            </div>
+        </div>      
+            
+        <div class="dropdown" >           
+            <button id="instruction" onclick="myFunction()"  class="dropbtn">INSTRUCTIONS</button>     
+         <div id="myDropdown" class="dropdown-content">
+          <p style="text-align:justify"><B>Follow these steps:</B><br><br>
+            <b>NOTE:</b> For better understanding we have not used the sequence number for representing frames instead we have taken the running serial number i.e., 1,2,3,4,5,6....<br><br>
+            <b>1. </b>Firstly, select the first four frames to be sent to the receiver, i.e., 1,2,3,4, and now wait to receive the acknowledgment of the 1<sup>st</sup> packet.<br>
+            <b>2. </b>After ACK 1 received, select the next frame to be sent i.e., 5<sup>th</sup>  and the window will slide having four frames, i.e., 2, 3, 4, 5.<br>
+            <b>3. </b>After ACK 2 received, select the next frame to be sent i.e., 6<sup>th</sup>  and the window will slide having four frames, i.e., 3, 4, 5, 6.<br> 
+            <B>4. </B>Retransmit  all the frames of the current window i.e.,  3, 4, 5, 6 because packet 3 lost.<br>
+            <b>5. </b>After ACK 3,4,5,6 received, select the next four frames to be sent.<br>
+            <b>6. </b>ACK 7 lost, so retransmit all the frames of the current window i.e.,  7, 8, 9, 10.<br>
+            <b>7. </b>ACK 7, 8, 9, 10 received, ALL FRAMES SENT!<br>
+            <b>8. </b>Input the correct total number of frames transmitted and click the <b>Submit</b> button.<br>
+            <b>9. </b>Select other window size to perform simulation.
+           </p>
+        </div>
+      </div>
+      <div id="sketch-holder" style="height:720px"></div>
+    </div>
+        </div>
+       
+   
+    <div class="footer" style="top:880px">
+        &copy; Copyright 2022 Virtual Labs, IIT Roorkee
+    </div>
+
+
+    
+    <script src="js/sketch4.js"></script>
+
+
+    <script>
+        function myFunction() {
+        console.log("check");
+       document.getElementById("myDropdown").classList.toggle("show");
+       }
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>

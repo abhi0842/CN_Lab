@@ -1,0 +1,575 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="bootstrap2.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+            </div>
+            <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+                height: 50px;
+                width: 400px;"></span></a>
+           
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo" style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          ">
+        <p align="center" style="font-size: 1em; color: white">
+          <b>Computer Network</b>
+        </p>
+      </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" style="background-color: #009dff;">
+
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network<!-- Write your lab name --></a>
+                        </li>
+                        <li>
+                            <a href="#">Stop & Wait ARQ<!-- Write your experiment name --></a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar" style="background-color: #1261a0">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="posttest.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="reference.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="contri">
+                        <a href="contributors.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Contributors</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Implementation of  Stop & Wait ARQ Flow Control Protocol
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                </div>
+
+                <div>
+                    
+                    <h3 id="introduction">Introduction</h3>
+                    <div style="text-align:justify;font-size: 1.2em;">
+                    
+                    Flow Control is a set of procedures for the Data Link Layer that controls the flow of data between the sender and the receiver. It allows two stations working at different speeds to communicate with each other. It is a set of measures taken to regulate the data that the Sender sends to receiver, so that no problem is faced if the Sender sends data at higher rate and receiver is too slow to support that data rate. To solve the above problem, FLOW CONTROL is introduced in Data Link Layer. It tells the sender how much data should be sent to the receiver so that the data is not lost. The main concept of Flow Control is to introduce EFFICIENCY in Computer Networks. To help in it, there are various flow control protocols which are classified as:- 
+                    
+                    <center><br>
+                    <img src="images/flowchart1.png" alt="">
+                    <figcaption><strong>Fig. 1 Flow Control Protocols</strong></figcaption><br>
+                    
+                    </center>
+                    
+                    The protocols in the first category cannot be used in real life, but they serve as a basis for understanding the protocols of noisy channels.<br><br>
+                    All the protocols we will discuss are unidirectional in the sense that the data frames travel from one node, called the sender, to another node, called the receiver. Although special frames, called acknowledgment (ACK) and negative acknowledgment (NAK) can flow in the opposite direction for flow and error control purposes, data flow in only one direction. In a real-life network, the data link protocols are implemented as bidirectional; data flow in both directions. In these protocols the flow and error control information such as ACKs and NAKs is included in the data frames in a technique called piggybacking. Because bidirectional protocols are more complex than unidirectional ones, we chose the latter for our discussion.<br>
+                    
+                    <h3>Simplest Protocol</h3>
+                    The simplest protocol is the Elementary Data Link Protocol. As the simplest protocol is used in noiseless channels, it has no error control and no flow control. In the simplest protocol, we assume that the receiver is always ready to handle any frames coming from the sender immediately. The simplest protocol is a unidirectional protocol in which the data frames are traveling in only one direction from the sender to the receiver.
+                    <br><br>
+                    Since the simplest protocol is unidirectional, there is no acknowledgment (ACK). Also, as there is no data loss in the transmission, there is no need for data re-transmission.<br>
+                    
+                    <h3>Design</h3>
+                    The data link layer at the sender site gets data from its network layer, makes a frame out of the data, and sends it. The data link layer(receiver site) receives a frame from its physical layer, extracts data from the frame, and convey the data to its network layer. The data link layers of the sender and receiver provide communication/transmission services for their network layers. The data link layers utilization the services provided by their physical layers for the physical transmission of bits.<br>
+                   
+                    <center><br>
+                    <img src="images/simplest.png" alt="">
+                    <figcaption><strong>Fig. 2 The data transfer and design of the simplest protocol.</strong></figcaption>
+                    <br>
+                    </center>
+                    
+                    <h3>Stop and Wait</h3>
+                    
+                    It provides unidirectional data transmission with flow control facilities but without error control facilities. The transmit and receive window sizes equal to <strong>one</strong> in both cases. Irrespective of the number of packets sender is having stop and wait for protocol requires only 2 sequence numbers 0 and 1.
+                    <br><br>
+                    Sender:<br>Rule 1) Send one data packet at a time.<br>Rule 2) Send the next packet only after receiving acknowledgement for the previous.<br>
+                    <br>
+                    Receiver:<br>Rule 1) Receive and consume data packet.<br>Rule 2) After consuming packet, acknowledgement need to be sent (Flow Control)<br>
+                    <center><br>
+                    <img src="images/img1.png" alt="">
+                    <figcaption><strong>Fig. 3 Working of Stop and Wait</strong></figcaption>
+                    
+                    </center>
+                    
+                    <h3>Advantages:</h3>
+                    <ol>
+                        <li>It is very simple to implement.</li>
+                        <li>The incoming packet from receiver is always an acknowledgement.</li>
+                    </ol>
+
+                    <h3>Limitations:</h3>
+                    <ol>
+                        <li>It is extremely inefficient because-
+                            <ul>
+                                <li>It makes the transmission process extremely slow.</li>
+                                <li>It does not use the bandwidth entirely as each single packet and acknowledgement uses the entire time to traverse the link.</li>
+                            </ul>
+                        </li>
+
+                        <li>If the data packet sent by the sender gets lost, then-
+                            <ul>
+                                <li>Sender will keep waiting for the acknowledgement for infinite time.</li>
+                                <li>Receiver will keep waiting for the data packet for infinite time.</li>
+                            </ul>
+                        </li>
+
+                        <li>If acknowledgement sent by the receiver gets lost, then-
+                            <ul>
+                                <li>Sender will keep waiting for the acknowledgement for infinite time.</li>
+                                <li>Receiver will keep waiting for another data packet for infinite time.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    <h3>Stop and Wait ARQ</h3>
+                    
+                    This protocol adds a simple error control mechanism to the Stop-and-Wait Protocol. Error control in the data link layer is often implemented simply: Any time an error is detected in an exchange, specified frames are retransmitted. This process is called automatic repeat request (ARQ).<br>
+                    <br>
+                    <b>This protocol involves the following transitions :</b>
+                    <ul>
+                        <li>The sender sends one frame at a time and waits for the acknowledgment.</li>
+                        <li>Once the receiver receives a valid frame, it sends an acknowledgment frame back to the sender.</li>
+                        <li>On receiving the acknowledgment frame, the sender understands that the receiver is ready to accept the next frame. So it sends the next frame in queue.</li>
+                        <li> If the ACK does not reach the sender before a certain time, known as the timeout, the sender sends the same frame again. The timeout countdown is reset after each frame transmission.</li>
+                    </ul>
+
+                    <center><b>Stop and Wait ARQ =</b> Stop and Wait + Timeout timer + Sequence number</center>
+                    
+                    
+                    <h4>NOTE:</h4>
+                    1. In Stop-and-Wait ARQ we use sequence numbers to number the frames. The sequence numbers are based on modulo-2 arithmetic.<br>
+                    2. In Stop-and-Wait ARQ the acknowledgment number always announces in modulo-2 arithmetic the sequence number of the next frame expected.<br><br>
+                    
+                    <strong>How Stop and Wait ARQ Solves All Problems?</strong><br>
+                    
+                    The problems of stop-and-wait are resolved by Stop and Wait ARQ that does both error control and flow control. <br><br>
+                    
+                    <strong>1. Problem of Lost Data Packet-</strong>
+                    <ul>
+                        <li>Time out timer helps to solve the problem of lost data packet.</li>
+                    </ul>
+
+                    <center><br>
+                    <img src="images/sw1.png" alt="">
+                    <figcaption><strong>Fig. 4 Solution for Lost Data Packet</strong></figcaption>
+                    </center>
+                    <br>
+                    <strong>2. Problem of Lost Acknowledgement-</strong>
+                    <ul>
+                        <li>Consider the acknowledgement sent by the receiver gets lost.</li>
+                        <li>Then, sender retransmits the same data packet after its timer goes off.</li>
+                        <li>The sequence number on the data packet helps the receiver to identify the duplicate data packet.</li>
+                        <li>Receiver discards the duplicate packet and re-sends the same acknowledgement.</li>
+                    </ul>
+
+                    <center>
+                    <img src="images/sw2.png" alt="">
+                    <figcaption><strong>Fig. 5 Solution for Lost Acknowledgement</strong></figcaption>
+                    </center>
+                    <br>
+                    
+                    <strong>3. Problem of Delayed Acknowledgement-</strong>
+                    
+                    <ul>
+                        <li>Sequence number on acknowledgements help to solve the problem of delayed acknowledgement.</li>
+                    </ul>
+                    
+                    
+                    <center>
+                    <img src="images/sw3.png" alt="">
+                    <figcaption><strong>Fig. 6 Solution for Delayed Acknowledgement</strong></figcaption>
+                    </center>
+                    <br>
+
+                    <strong>4. Problem of Damaged Packet-</strong>
+                    <ul>
+                        <li>If receiver receives a corrupted data packet from the sender, it sends a negative acknowledgement (NAK) to the sender.</li>
+                        <li>NAK requests the sender to send the data packet again.</li>
+                    </ul>
+
+                    <center>
+                    <img src="images/sw4.png" alt="">
+                    <figcaption><strong>Fig. 7 Solution for Damaged Packet</strong></figcaption>
+                    </center>
+                    <br>
+
+                    <h3>Working of Stop and Wait for ARQ:</h3>
+                    <ol>
+                        <li>Sender A sends a data frame or packet with sequence number 0.</li>
+                        <li>Receiver B, after receiving the data frame, sends an acknowledgement with sequence number 1 (the sequence number of the next expected data frame or packet)<br> 
+                            There is only a one-bit sequence number that implies that both sender and receiver have a buffer for one frame or packet only. </li>
+                    </ol>
+                    
+                    <center>
+                    <img src="images/arq.png" alt="">
+                    <figcaption><strong>Fig. 8 Working of Stop-and-Wait ARQ</strong></figcaption>
+                    </center><br>
+                    
+                    <h3>Few Terminologies :</h3>
+                    
+                    <ol>
+                        <li>
+                            Transmission Delay (T<sub>t</sub>) : Time to transmit the packet from host to the outgoing link.<br>  
+                    
+                            <center style="font-size: 22px;">
+                            <math>
+                                <mrow>
+                                    <msub>
+                                        <mi>T</mi>
+                                        <mn>t</mn>
+                                    </msub>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mi>D</mi>
+                                        <mi>B</mi>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+        
+                         </center>
+
+                         where,<br>
+                         <ul>
+                            <li>D : Data Size to transmit,</li>
+                            <li>B : Bandwidth of the link.</li>
+                         </ul>
+                     
+                         <br>
+                        </li>
+
+                        <li>
+                            Propagation Delay (T<sub>p</sub>) : It is the time taken by the first bit transferred by the host onto the outgoing link to reach the destination. 
+                    
+                            <center style="font-size: 22px;">
+                                <math>
+                                    <mrow>
+                                        <msub>
+                                            <mi>T</mi>
+                                            <mn>p</mn>
+                                        </msub>
+                                        <mo>=</mo>
+                                        <mfrac>
+                                            <mi>d</mi>
+                                            <mi>s</mi>
+                                        </mfrac>
+                                    </mrow>
+                                </math>
+            
+                             </center>
+                             where,<br>
+                             <ul>
+                                <li>d : distance,</li>
+                                <li>s : the wave propagation speed (depends on the characteristics of the medium).</li>
+                             </ul>
+                         
+                         <br>
+
+                        </li>
+
+                        <li>
+                            Efficiency of stop-and-wait ARQ (η)   
+                            <center style="font-size: 22px;">
+                                <math>
+                                    <mrow>
+                                            <mi>η</mi>
+                                        <mo>=</mo>
+                                        <mfrac>
+                                            <mi>Useful Time </mi>
+                                            <mi>Total Time</mi>
+                                        </mfrac>
+                                    </mrow>
+                                </math>
+            
+                             </center>
+                             where,<br>   
+                             <ul>
+                                <li>Useful time = Transmission delay of data packet = (Transmission delay)<sub>packet</sub></li>
+                                <li>Useless time = Time for which sender is forced to wait and do nothing = 2 x Propagation delay</li>
+                                <li>Total time = Useful time + Useless time</li>
+                             </ul> 
+
+                            Thus,<br>  
+
+                            <center style="font-size: 22px;">
+                                <math>
+                                    <mrow>
+                                        <mi>η</mi>
+                                        <mo>=</mo>
+                                        <mfrac>
+                                            
+                                                <msub>
+                                                    <mi>(Transmission delay)</mi>
+                                                    <mn>packet</mn>
+                                                </msub>
+        
+    
+                                                <mrow>
+                                                    <msub>
+                                                        <mi>(Transmission delay)</mi>
+                                                        <mn>packet</mn>
+                                                    </msub>
+                                                    <mo>+</mo>
+                                                    <mi>2</mi>
+                                                
+                                                <mo>*</mo>
+                                                    <mi>Propagation delay</mi>
+
+                                            </mrow>
+    
+                                            
+                                            
+                                        </mfrac>
+                                    </mrow>
+                                </math>
+                                <br>
+                                <br>
+
+  
+                               <math>
+                                <mrow>
+                                        <mi>η</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        
+                                            <msub>
+                                                <mi>T</mi>
+                                                <mn>t</mn>
+                                            </msub>
+    
+
+                                            <mrow>
+                                                <msub>
+                                                    <mi>T</mi>
+                                                    <mn>t</mn>
+                                                </msub>
+                                                <mo>+</mo>
+                                                <mi>2</mi>
+                                            
+                                            <mo>*</mo>
+                                            <msub>
+                                                <mi>T</mi>
+                                                <mn>p</mn>
+                                            </msub>
+                                        </mrow>
+
+                                        
+                                        
+                                    </mfrac>
+                                </mrow>
+                            </math>
+
+                            <br>
+                            <br>
+ 
+                           <math>
+                            <mrow>
+                                    <mi>η</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    
+                                            <mi>1</mi>
+
+                                        <mrow>
+                                                <mi>1</mi>
+                                            <mo>+</mo>
+                                            <mi>2</mi>
+                                        
+                                        <mo>*</mo>
+                                        <mfrac>
+                                            <msub>
+                                                <mi>T</mi>
+                                                <mn>p</mn>
+                                            </msub>
+                                            <msub>
+                                                <mi>T</mi>
+                                                <mn>t</mn>
+                                            </msub>
+                                        </mfrac>
+                                       
+                                    </mrow>
+                                </mfrac>
+                            </mrow>
+                        </math>
+
+                        <br>
+                            <br>
+
+  
+                           <math>
+                            <mrow>
+                                    <mi>η</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    
+                                            <mi>1</mi>
+
+                                        <mrow>
+                                                <mi>1</mi>
+                                            <mo>+</mo>
+                                            <mi>2</mi>
+                                        
+                                        <mo>*</mo>
+
+                                                <mi>a</mi>
+                                       
+                                    </mrow>
+                                </mfrac>
+                            </mrow>
+                        </math>
+                            </center>
+                            <br> 
+
+                            where,<br>
+                            <math style="margin-left:50px;font-size:20px">
+                                <mrow>
+                                        <mi>a</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <msub>
+                                            <mi>T</mi>
+                                            <mn>p</mn>
+                                        </msub>
+                                        <msub>
+                                            <mi>T</mi>
+                                            <mn>t</mn>
+                                        </msub>
+                                    </mfrac>
+                                </mrow>
+                            </math>              
+                        </li>
+                    </ol>
+                   
+                   <h3>Advantages:</h3>
+                    
+                   <ul>
+                    <li>It is very simple to implement.</li>
+                    <li>The incoming packet from receiver is always an acknowledgement.</li>
+                   </ul>
+                    
+                    <h3>Disadvantage:</h3>
+                    <ul>
+                        <li>Inefficient</li>
+                    </ul>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by IITR, Roorkee</h4>
+        </footer>
+        <!-- /.control-sidebar -->
+    </div>
+</body>
+
+</html>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

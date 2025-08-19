@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <link href="css/boot.css" rel="stylesheet">
+       
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="css/bootstr.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+</head>
+<body>
+    <div id = "men">
+        <form>
+            <br>
+            <br>
+            <!-- <button type="button" class="btn btn-secondary btn-lg" >Bridge with Switch</button> -->
+        </form>
+    </div> 
+    
+    <div class="flex-container" id = "bridge">
+        <button id='button1' class="res" onclick="reload()" >Reset</button>
+        <button id='button2' class="sim" onclick="myMove()" >Start simulation</button>
+        <script>
+            function check() {
+                  if (document.getElementById('pl1').checked) {
+                     document.getElementById('p1').disabled = true;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p4').disabled = false;     
+                  }
+                  else if(document.getElementById('pl2').checked) {
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = true;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p4').disabled = false;                     
+                  }
+                  else if(document.getElementById('pl3').checked) {                    
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = true;
+                     document.getElementById('p4').disabled = false;                
+                  }
+                  else if(document.getElementById('pl4').checked) {
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = false; 
+                     document.getElementById('p4').disabled = true;              
+                  }
+                 
+               }
+               function unchecked1()
+                        {
+                            document.getElementById('p1').checked=false;
+                        }
+                        function unchecked2()
+                        {document.getElementById('p2').checked=false;}
+                        function unchecked3()
+                        {document.getElementById('p3').checked=false;}
+                        function unchecked4()
+                        {document.getElementById('p4').checked=false;}
+                           
+         </script>
+
+        <label class="wm1" for="">Select Source MAC Address</label>
+        <label class="wm2" for="">Select Destination MAc Address</label>
+        <label class="wc1" for="">00:00:00:a1:2b:cc</label>       
+        <label class="wc3" for="">00:00:00:a3:2b:cd</label>
+        <label class="wc4" for="">00:00:00:a4:2b:cf</label>       
+        <label class="wc6" for="">00:00:00:a6:2b:cm</label>
+        <input type="radio" id="p1" class="w1" name="" value="1" ondblclick="unchecked1()">
+        <input type="radio" id="p2" class="w2" name="" value="1" ondblclick="unchecked2()">
+        <input type="radio" id="p3" class="w3" name="" value="1" ondblclick="unchecked3()">
+        <input type="radio" id="p4" class="w4" name="" value="1" ondblclick="unchecked4()">
+        <input type="radio" id="pl1" class="wr1" name="sou" value="1" onchange="check()">        
+        <input type="radio" id="pl2" class="wr2" name="sou" value="1" onchange="check()">
+        <input type="radio" id="pl3" class="wr3" name="sou" value="1" onchange="check()">
+        <input type="radio" id="pl4" class="wr4" name="sou" value="1" onchange="check()">
+        <label class="wrl1" for="">00:00:00:a1:2b:cc</label>        
+        <label class="wrl2" for="">00:00:00:a3:2b:cd</label>
+        <label class="wrl3" for="">00:00:00:a4:2b:cf</label>  
+        <label class="wrl4" for="">00:00:00:a6:2b:cm</label>
+        <label class="wrr1" for="">00:00:00:a1:2b:cc</label> 
+        <label class="wrr2" for="">00:00:00:a3:2b:cd</label>
+        <label class="wrr3" for="">00:00:00:a4:2b:cf</label>    
+        <label class="wrr4" for="">00:00:00:a6:2b:cm</label>
+
+
+         <span class="w3-xxlarge"><i id="net" class="far fa-envelope glyphicon"></i></span>
+         
+          <span class="w3-xxlarge wrapper"><i style="left: 800px; top: 60px;" id="net1" class="far fa-envelope glyphicon"></i></span>
+          <span class="w3-xxlarge wrapper"><i style = "left: 940px; top: 260px;"id="net2" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style="left: 910px; top: 485px;" id="net3" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style="left: 800px; top: 60px;" id="net4" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i id="net5" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style="left: 800px; top: 260px;" id="net6" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style = "left: 940px; top: 260px;"id="net7" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style="left: 800px; top: 485px;" id="net8" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style="left: 800px; top: 485px;" id="net9" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i id="net10" class="far fa-envelope glyphicon"></i></span>
+            <span class="w3-xxlarge wrapper"><i style="left: 940px; top: 70px;" id="net11" class="far fa-envelope glyphicon"></i></span>
+           <span class="w3-xxlarge wrapper"><i style = "left: 940px; top: 260px;"id="net12" class="far fa-envelope glyphicon"></i></span>
+
+        <img id = "capture" src="images/abridge.PNG" alt="" width="650" height="600" style="margin-left: 300px;margin-bottom: 10px ;">
+    
+    <!--h5> <center> <b>Implementation of bridge using Switch.</b></center> </h5-->
+        <div id="msg1" class="bulb1">
+            <b>Properties of Bridge: </b><br>
+        1. Bridge works on Physical and Data Link Layer.<br>
+        2. It is a 2 port device.<br>
+        3. Bridge checks to forward or filter the packet using routing table.<br>
+        4. It is also used for interconnecting two LANs working on the same protocol.<br>
+        </div>
+       
+        <script src="js/bridgesimu.js"></script>
+    
+    </div>
+    
+    
+    
+</body>
+</html>

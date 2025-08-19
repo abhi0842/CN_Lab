@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Tier Client Server Architecture</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <button id="instructionsBtn">Instructions</button>
+
+    <div id="instructionsModal">
+        <div id="instructionsContent">
+            <button id="closeBtn">Close</button>
+            <h2>Instructions</h2>
+            <ul>
+                <h4> 1- Send Request :</h4>
+               <li> Click the <b>"Send Request" </b> button to enter your search query in the text area that appears then, press enter to initiate sending data packets from the client nodes to the server.</li>
+               <h4>Note :</h4>
+               <p style="font-size: 15px;"><b>The User Can only ask the Following Questions:-</b></p>
+               <li>What is client?</li>
+               <li>What is client-server architecture?</li>
+               <li>What is server?</li>
+               <li>What is internet?</li>
+               <li>What is computer network?</li>
+               <h4>2- Send Response :</h4>
+                <li>After sending the request, Click the <b>"Send Response"</b>button to process and visualize the server response.</li>
+                <br>
+                <li> The response will be generated based on predefined FAQs and displayed in the response text area.</li>
+                <br>
+                <li>The packets will move from the server back to the client nodes, indicating the response flow.</li>
+                <br>
+                <b style="font-size: 18.5px;">3-</b> Click the <b>"Reset"</b> button to refresh the page and reset all animations and data.
+                <br><br>
+                <b style="font-size: 18.5px;"> 4-</b> Click the <b>"Print"</b> button to print the current state of the page.
+              </ul> 
+        </div>
+    </div>
+
+    <div class="heading-container">
+        <h1>Two-Tier Client Server Architecture</h1>
+    </div>
+    <div id="container">
+        
+         <div id="inner-border">
+            <h3 style="margin-left: 6px; margin-top: -440px; color: #007bff;"><b>Client's </b></h3>
+            <h3 style=" display: inline; font-weight: bolder; position: absolute; margin-top: -255px; margin-left: 915px; color: #007bff;"> <pre style="font-size: 18px; font-family: Arial, sans-serif;">Internet (LAN) </pre></h3>
+            <h3 style=" display: inline; font-weight: bolder; position: absolute; margin-top: -440px; margin-left: 1750px; color: #007bff;"> <pre style="font-size: 18px; font-family: Arial, sans-serif;">Server</pre></h3>
+
+           <div class="source-container">
+                <div class="source-item">
+                    <img style="position: absolute; margin-top: -10px; margin-left: 19px;" src="images/11.gif" alt="Workstation"width="100" height="90" class="node" id="node1" >
+                    <div style="font-weight: bolder; margin-left: 14px; margin-top: 90px; color: #007bff;" >Workstation</div>
+                </div>
+                <div class="source-item">
+                    <img style="position: absolute; margin-top: -22px; margin-left: 19px;" src="images/22.gif" alt="Smartphone"width="100" height="102" class="node" id="node3">
+                    <div style="font-weight: bolder; margin-left: 16px; margin-top: 80px; color: #007bff;" >Smartphone</div>
+                </div>
+                <div class="source-item">
+                    <img style="position: absolute; margin-top: -20px; margin-left: 19px;" src="images/3.gif" alt="Laptop" width="125" height="100" class="node" id="node4">
+                    <div style=" font-weight: bolder; margin-left: 18px; margin-top: 84px; color: #007bff;" >Laptop</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="internet-container">
+            <div class="node" id="destination"></div>
+            <img style="position: absolute; margin-top: -96px; margin-left: 18px;" src="images/4.gif" alt="Internet" width="100" height="100">
+
+        </div>
+
+<img id="image1" class="hidden" style=" position: absolute; margin-left: 310px; margin-top: -260px;" src="images/88.png" alt="arrow" width="150px" height="150px">
+<img id="image2" class="hidden" style=" position: absolute; margin-left: 306px; margin-top: 280px;" src="images/59.png" alt="arrow" width="150px" height="150px">
+<img id="image3" class="hidden" style= "position: absolute; margin-left: 700px; margin-top: -55px;" src="images/99.png" alt="arrow" width="150px" height="150px">
+
+<img id="image4" class="hidden" style="position: absolute; margin-left: 310px; margin-top: -260px;" src="images/60.png" alt="arrow" width="150px" height="150px">
+<img id="image5" class="hidden" style="position: absolute; margin-left: 306px; margin-top: 280px;" src="images/89.png" alt="arrow" width="150px" height="150px">
+<img id="image6" class="hidden" style="position: absolute; margin-left: 700px; margin-top: -55px;" src="images/100.png" alt="arrow" width="150px" height="150px">
+
+       
+           
+            <div id="inner-border2">
+     
+            <div style="color: #007bff;" class="node" id="destination2"></div>
+            <img src="images/32.gif" alt="Server" width="255" height="300">
+            
+        </div>
+
+        <svg id="svgContainer">
+        </svg>
+    </div>
+
+    <div id="buttonContainer">
+        <button id="sendButton">Send Request</button>
+        <button id="resetBtn" onclick="location.reload()">Reset</button>
+        <button id="sendresponse">Send Response</button>
+        <button id="printbtn" onclick="window.print()">Print</button>
+    </div>
+
+    <div id="questionBox">
+    <textarea id="questionInput" placeholder="Type your question here..."></textarea>
+</div>
+
+    <div id="responseBox">
+        <textarea id="responseInput" readonly></textarea>
+        <div>
+            <button id="closeResponse">Close</button>
+        </div>
+    </div>
+
+    <footer><b>&copy; 2024 | Virtual Labs, IIT Roorkee</b></footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

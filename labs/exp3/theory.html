@@ -1,0 +1,350 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="bootstrap2.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+            </div>
+            <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+                height: 50px;
+                width: 400px;"></span></a>
+
+                </div>
+    </div>
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo" style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          ">
+        <p align="center" style="font-size: 1em; color: white">
+          <b>Computer Network</b>
+        </p>
+      </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard"></i>Computer Network<!-- Write your lab name --></a>
+                        </li>
+                        <li>
+                            <a href="#">Selective Repeat ARQ<!-- Write your experiment name --></a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="posttest.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="reference.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="contri">
+                        <a href="contributors.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Contributors</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Implementation of Selective Repeat ARQ Flow Control Protocol
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                
+
+                <div>
+                    <h3 id="introduction">Introduction</h3>
+                    <div style="text-align:justify;font-size: 1.2em;">
+                    
+                    Flow Control is a set of procedures for the Data Link Layer that controls the flow of data between the sender and the receiver. It allows two stations working at different speeds to communicate with each other. It is a set of measures taken to regulate the data that the Sender sends to receiver, so that no problem is faced if the sender sends data at higher rate and receiver is too slow to support that data rate. To solve the above problem, FLOW CONTROL is introduced in Data Link Layer. It tells the sender how much data should be sent to the receiver so that the data is not lost. The main concept of Flow Control is to introduce EFFICIENCY in Computer Networks. To help in it, there are various flow control protocols which are classified as:- 
+                    
+                    <center><br>
+                    <img src="images/flowchart.png" alt="">
+                    <figcaption><strong>Fig. 1 Flow Control Protocols</strong></figcaption>  
+                    </center>
+                    <br>
+                    
+                    The protocols in the first category cannot be used in real life, but they serve as a basis for understanding the protocols of noisy channels.<br><br>
+                    All the protocols we will discuss are unidirectional in the sense that the data frames travel from one node, called the sender, to another node, called the receiver. Although special frames, called acknowledgment (ACK) and negative acknowledgment (NACK) can flow in the opposite direction for flow and error control purposes, data flow in only one direction. In a real-life network, the data link protocols are implemented as bidirectional; data flow in both directions. In these protocols the flow and error control information such as ACKs and NACKs is included in the data frames in a technique called piggybacking. Because bidirectional protocols are more complex than unidirectional ones, we chose the latter for our discussion.<br>
+                    
+                    <h3>Selective Repeat Protocol</h3>
+                    
+                    Selective Repeat is part of the automatic repeat request (ARQ). The go-back-n protocol works well if errors are less, but if the line is poor it wastes a lot of bandwidth on retransmitted frames. An alternative strategy, the selective repeat protocol, is to allow the receiver to accept and buffer the frames following a damaged or lost one. Selective Repeat attempts to retransmit only those packets that are actually lost (due to errors):
+                    <ul>
+                        <li>Receiver must be able to accept packets out of order.</li>
+                        <li>Since receiver must release packets to higher layer in order, the receiver must be able to buffer some packets.</li>
+                    </ul>
+
+                    
+                    <h4>This protocol involves the following transitions :</h4>
+                    <ul>
+                        <li>In this protocol, Sender’s Windows (W<sub>s</sub>) = Receiver’s Windows (W<sub>r</sub>). The size of the sliding window is always greater than 1.</li>
+                        <li>A sender can send multiple frames as allowed by the window size.</li>
+                        <li>The receiver sends the acknowledgement for each frame.</li>
+                        <li>If the acknowledgement for a particular frame is not received, then the sender resends that frame again without disturbing the flow of others.</li>
+                        <li>The receiver side, if the frame received is corrupted, then the receiver can send a negative acknowledgement (NAK/NACK).</li>
+                        <li>When negative acknowledgement is received by the sender, then that particular frame is re-sent similarly.</li>
+                        <li>In this protocol, the size of the sender and receiver window must be at most one-half of 2^m where m is the size of the sequence number field in bits.</li>
+                    </ul>
+  
+                    
+                    <h4>Example of Selective Repeat ARQ:</h4>
+                    
+                    <br>
+                    <center>
+                    
+                    <img src="images/SR.jpg" alt="">
+                    <figcaption><strong>Fig. 2 Working of Selective Repeat ARQ</strong></figcaption>
+                  </center><br>
+
+                   <h4>Explanation:</h4>
+                    
+                    Step 1: Frame 0 sends from sender to receiver and set timer. <br>
+                    
+                    Step 2: Without waiting for acknowledgement from the receiver another frame, Frame1 is sent by sender by setting the timer for it. <br>
+                    
+                    Step 3: In the same way frame 2 is also sent to the receiver by setting the timer without waiting for previous acknowledgement. <br>
+                    
+                    Step 4: Whenever sender receives the ACK0 from receiver, within the frame 0 timer then it is closed and sent to the next frame, frame 3. <br>
+                    
+                    Step 5: whenever the sender receives the ACK1 from the receiver, within the frame 1 timer then it is closed and sent to the next frame, frame 4. <br>
+                    
+                    Step 6: If the sender doesn’t receive the ACK2 from the receiver within the time slot, it declares timeout for frame 2 and resends the frame 2 again, because it thought the frame2 may be lost or damaged. 
+                    
+                   <h3>Few Terminologies :</h3>
+                    
+                   <ol>
+                    <li>
+                        Transmission Delay (T<sub>t</sub>) : Time to transmit the packet from host to the outgoing link.<br>  
+                
+                        <center style="font-size: 22px;">
+                        <math>
+                            <mrow>
+                                <msub>
+                                    <mi>T</mi>
+                                    <mn>t</mn>
+                                </msub>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mi>D</mi>
+                                    <mi>B</mi>
+                                </mfrac>
+                            </mrow>
+                        </math>
+                
+                     </center>
+                
+                     where,<br>
+                     <ul>
+                        <li>D : Data Size to transmit,</li>
+                        <li>B : Bandwidth of the link.</li>
+                     </ul>
+                 
+                     <br>
+                    </li>
+                
+                    <li>
+                        Propagation Delay (T<sub>p</sub>) : It is the time taken by the first bit transferred by the host onto the outgoing link to reach the destination. 
+                
+                        <center style="font-size: 22px;">
+                            <math>
+                                <mrow>
+                                    <msub>
+                                        <mi>T</mi>
+                                        <mn>p</mn>
+                                    </msub>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mi>d</mi>
+                                        <mi>s</mi>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+                
+                         </center>
+                         where,<br>
+                         <ul>
+                            <li>d : distance,</li>
+                            <li>s : the wave propagation speed (depends on the characteristics of the medium).</li>
+                         </ul>
+                     
+                     <br>
+                
+                    </li>
+                
+                    <li>
+                        Efficiency of GBN (η)   
+                        <center style="font-size: 22px;">
+                            <math>
+                                <mrow>
+                                        <mi>η</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mi>Sender Window Size in Protocol</mi>
+                                        <mi>(1 + 2a)</mi>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+                <br><br>
+                <math>
+                    <mrow>
+                            <mi>η</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mi>N</mi>
+                            <mi>(1 + 2a)</mi>
+                        </mfrac>
+                    </mrow>
+                </math>
+                         </center>
+                         where,<br>   
+                         
+                            <math style="margin-left:50px;font-size:20px">
+                                <mrow>
+                                        <mi>a</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                     
+                                            <mi>Propagation delay</mi>
+                                            <mi>Transmission delay</mi>
+                                    </mfrac>
+                                </mrow>
+                            </math>  
+                       
+                
+                
+                        <br> 
+                
+                             
+                    </li>
+                </ol>
+                    
+                    <h3>Advantages</h3>
+                    <ul>
+                        <li>It can send multiple frames at once.</li>
+                        <li>Fewer transmission.</li>
+                    </ul>
+                    
+                    <h3>Disadvantages</h3>
+                    <ul>
+                        <li>More complexity at sender and receiver side.</li>
+                        <li>Each frame must be acknowledged individually (no cumulative acknowledgements).</li>
+                        <li>Receiver may receive frames out of sequence.</li>
+                    </ul>
+                    
+                    </div>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <h4 align="center"> Lab contributed by IITR, Roorkee</h4>
+        </footer>
+        <!-- /.control-sidebar -->
+    </div>
+</body>
+
+</html>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

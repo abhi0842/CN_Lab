@@ -1,0 +1,10 @@
+# Aim
+To explore, understand, and demonstrate the functionality and differences of two-tier and three-tier client-server architectures.
+
+
+
+
+
+
+
+

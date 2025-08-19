@@ -1,0 +1,743 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+        height: 50px;
+        width: 400px;"></span></a>
+    </div>
+  
+  </div>
+</div>
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo" style="
+        background-color: #009dff;
+        border-right: solid;
+        border-right-color: #1261a0;
+      ">
+    <p align="center" style="font-size: 1em; color: white">
+      <b>Computer Network</b>
+    </p>
+  </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href=""><i class="fa fa-dashboard"></i>Computer Network<!-- Write your lab name --></a>
+              </li>
+              <li>
+                <a href="#">Network Devices<!-- Write your experiment name --></a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+               
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview">
+                    <a href="aim.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="active treeview">
+                    <a href="theory.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+                
+                <li class="treeview">
+                    <a href="posttest.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>Post Test</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="contri">
+                    <a href="contributors.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>Contributors</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+               <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                    <b>Demonstration of the functioning of Network Devices used for establishing communication among the computer/networks</b>
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:5%">Introduction</h3>
+                    <div style="text-align:justify;font-size: 1.2em;">
+                    
+                    Networking Devices-Hardware devices that are used to connect computers, printers, fax machines and other electronic devices to a network are called network devices. 
+                    These devices transfer data in a fast, secure and correct way over same or different networks. Network devices may be inter-network or intra-network. 
+                    Some devices are installed on the device, like NIC card or RJ45 connector, whereas some are part of the network, like router, switch, etc.
+                    
+                    Before moving on to network devices, let&#39;s understand two terms:<br>
+                    
+                     1. <strong>Collision domain</strong>
+                    
+                         A collision domain is, as the name implies, the part of a network where packet collisions can occur. 
+                         A collision occurs when two devices send a packet at the same time on the shared network segment. 
+                         The packets collide and both devices must send the packets again, which reduces network efficiency.<br>
+                         
+                         <center>               
+                         <img src="images/collision_domains.jpg" alt="Hubs"><br>     
+                         <figcaption><strong>Fig. 1 Illustration of collision domain</strong></figcaption>
+                         </center>
+                    
+                    2. <strong>Broadcast domain</strong>
+                    
+                         A broadcast domain is the domain in which a broadcast is forwarded. 
+                         A broadcast domain contains all devices that can reach each other at the data link layer (OSI layer 2) by using broadcast. 
+                         All ports on a hub or a switch are by default in the same broadcast domain. 
+                         All ports on a router are in the different broadcast domains and routers don’t forward broadcasts from one broadcast domain to another.<br>
+                          <center>
+                         <img src="images/broadcast_domains.jpg" alt="Hubs">
+                             <figcaption><strong>Fig. 2 Illustration of broadcast domain</strong></figcaption>  
+                          </center>
+                    
+                   <h3>Network devices</h3>
+                   <ol>
+                    <li><b>Hubs</b><br>
+                        Hubs connect multiple computer networking devices together. 
+                        A hub also acts as a repeater in that it amplifies signals that deteriorate after traveling long distances over connecting cables. 
+                        A hub is the simplest in the family of network connecting devices because it connects LAN components with identical protocols. 
+                        A hub can be used with both digital and analog data, provided its settings have been configured to prepare for the formatting of the incoming data. 
+                        Hubs operate at the Physical layer of the Open Systems Interconnection (OSI) model.<br>
+                        <center>
+                   
+                        <img src="images/Hubs.png" alt="Hubs">
+                        <figcaption><strong>Fig. 3 Hub</strong></figcaption>       
+                        </center>
+
+                        <h4>How Does a Hub Work?</h4>
+                    
+                         Hubs do not perform packet filtering or addressing functions; they just send data packets to all connected devices. 
+                         Hub consists of multiple ports. Each port can connect one device. A connected device, say 1, sends the frame (sender). 
+                         This frame will be delivered to all the connected devices (receivers), say 2,3, and 4 in this case. 
+                         Although the frame is sent to all ports, a connected device only accepts those frames whose MAC matches the destination MAC address field. 
+                         The rest of the frames are discarded by that device. 
+
+                         <center>
+                         <img src="images/hub_working.jpg" alt="Hubs">
+                         <figcaption><strong>Fig. 4 Multiple devices connected to hub</strong></figcaption>     
+                         </center>
+                    
+                         Suppose devices 1 and 2 simultaneously send frames/frames to the hub. Due to this, frames often crash. 
+                         N number of collision domains are possible in the hub, where N refers to the number of devices connected to the hub. 
+                         Whenever this collision occurs, the host that has sent the frame will detect it. 
+                         The sent frames are destroyed, and the host sends a jam signal for other hosts to wait. 
+                         The waiting period is different for each host to avoid any further collision. 
+                    
+                    
+                         <h4>Hub falls in three categories:</h4>
+                         Initially, hubs were passive devices. However, with development of advanced technology, active hubs and intelligent hubs came into use.<br>
+                          
+                         <center>
+                          <img src="images/hubs.jpg" alt="Hubs">
+                          <figcaption><strong>Fig. 5 Types of hub</strong></figcaption> 
+                         </center>
+
+                         <ul>
+                            <li><strong>Passive Hub:</strong> They are more like point contact for the wires to build in the physical network. 
+                                They have nothing to do with modifying the signals.</li>
+                            <li><strong>Active Hub:</strong> They are smarter than the passive hubs. 
+                                They not only provide the path for the data signals in fact they regenerate, concentrate and strengthen the signals before sending them to their destinations. 
+                                Active hubs are also termed as ‘repeaters’. The limitation of active hubs is that they magnify noise along with the signals.</li>
+                            <li><strong>Intelligent Hub:</strong> They have a special kind of software in them to perform management functions in the network. 
+                                The software offers them the capability to find and separate network issues. Thus they have both monitoring and management capabilities.</li>
+                        </ul>
+                    
+                         <h4>Advantages of Hub </h4>
+                         <ul>
+                            <li><strong>Message broadcast:</strong> A host in a hub sends messages to every other device in the connecting network.</li>
+                            <li><strong>Cheaper devices:</strong> Among routers, hubs and switches; hubs are the least expensive since they are purely hardware.</li>
+                            <li><strong>Easy installation:</strong> It can be easily installed thus it automatically creates a local area network (LAN).</li>
+                            <li><strong>Easy removal of damaged device:</strong> Due to the different connecting wires, the hub remains perfectly functional even if one of the network segments stops working.
+                            </li>
+                         </ul>
+                    
+                        <h4>Limitation of Hub</h4>
+                        <ul>
+                            <li><strong>Hub is everything:</strong> Total damage to the hub will cause the entire network to fail, even if all ports are perfectly functional. </li>
+                            <li><strong>No filtering:</strong> Hubs do not allow packet filtering. This means that any data that is being forwarded to one device will also be forwarded to all connected devices.</li>
+                            <li><strong>No security:</strong> Since the hub broadcasts messages to every port, it is not possible to send any private frame. This allows other connected ports to access your data.</li>
+                            <li><strong>Network Traffic is high:</strong> Hubs broadcast the frame/data to every connected device due to which the traffic is high.</li>
+                            <li><strong>Does not use full duplex transmission mode:</strong> Hubs use the half-duplex method for transmission. In the half duplex mode, you can either send a frame or receive a frame at a time. It is not possible to send and receive frames simultaneously.</li>
+                            <li><strong>Cannot connect to different network architectures:</strong> Hubs cannot connect with different network architectures such as token, ring, and ethernet.</li>
+                         </ul>
+                    </li>
+                    <br>
+
+                    <li>
+                        <b>Bridge</b><br>
+                    
+                        A bridge is used to connect multiple LANs together with a larger Local Area Network (LAN). 
+                        The mechanism of network aggregation is known as bridging. 
+                        The bridge is a physical or hardware device but operates at the OSI model’s data link layer and is also known as a layer of two switches. 
+                        The basic role of bridges in network architecture is storing and forwarding frames between the different segments that the bridge connects. 
+                        They use hardware Media Access Control (MAC) addresses for transferring frames. 
+                        By looking at the MAC address of the devices connected to each segment, bridges can forward the data or block it from crossing.<br>
+                        
+                        <h4>Functions of Bridges in the Network</h4>   
+                        <ul>
+                            <li>The bridge is used to divide LANs into multiple segments.</li>
+                            <li>To control the traffic in the network.</li>
+                            <li>It can interconnect two LANs with a similar protocols.</li>
+                            <li>It can filter the data based on destination/MAC address.</li>
+                        </ul>
+                   
+                        <h4>Types of bridge:</h4>
+                        <ul>
+                            <li><strong>Transparent Bridge:</strong> It is also called learning bridges. Bridge construct its table of terminal addresses on its own as it implements connecting two LANs. It facilitates the source location to create its table. It is self-updating.</li>
+                            <li><strong>Source Route Bridge:</strong> It derives its name from the fact that the path which the packet takes through the network is implanted within the packet. It is mainly used in Token ring networks.  </li>
+                            <li><strong>Translational Bridge:</strong> The process of conversion takes place via Translational Bridge. It converts the data format of one networking to another. For instance Token ring to Ethernet and vice versa.</li>
+                        </ul>   
+                   
+                        <h4>How does a bridge work?</h4>
+                   
+                        A bridge in computer network either blocks or forwards the data depending on the destination MAC address. 
+                        The address is written into each data frame. Bridge accepts every packet and amplifies them to another side. 
+                        However, they allow only selected packets to pass through them that are addressed from one node in a network to a node in other networks. 
+                        It receives all packets from LAN segments. The bridge builds a table of addresses from which it can identify which packets are sent from which LAN to which LAN.                 
+                        <center>
+                        <img src="images/Bridge.png" alt="Bridge">
+                        <figcaption><strong>Fig. 6 Bridge</strong></figcaption>     
+                        </center>
+                   
+                       <h4>Advantages of Bridges</h4>
+                       <ul>
+                        <li>It can extend a network by acting as a repeater.</li>
+                        <li>It separates the collision domains.</li>
+                        <li>Because fewer network nodes share a collision domain, bridges increase the available bandwidth to individual nodes.</li>
+                        <li>Reduces network congestion by dividing LAN into multiple smaller segments.</li>
+                       </ul>
+                   
+                   
+                        <h4>Disadvantages of Bridges</h4>
+                        <ul>
+                            <li>Cannot read specific IP addresses.</li>
+                            <li>Unable to provide communication network among networks of different protocols.</li>
+                            <li>Cannot limit the capacity of broadcast messages as they transfer all the messages.</li>
+                            <li>Unable to handle complicated variable data load.</li>
+                        </ul>
+                   
+                    </li>
+
+                    <li><strong>Router</strong><br>
+                    
+                        A router is a network layer hardware device that transmits data from one LAN to another if both networks support the same set of protocols. 
+                        So a router is typically connected to at least two LANs and the internet service provider (ISP). 
+                        It receives its data in the form of packets, which are data frames with their destination address added. 
+                        Router also strengthens the signals before transmitting them. That is why it is also called repeater.<br>
+                        The router basically performs two major functions: 
+                   <ul>
+                    <li><strong>Forwarding :</strong>
+                        The router receives the packets from its input ports, checks its header, performs some basic functions like checking checksum, 
+                        and then looks up to the routing table to find the appropriate output port to dump the packets onto, and forwards the packets onto that output port.  
+                   </li>
+                    <li><strong>Routing :</strong> 
+                        Routing is the process by which the router ascertains what is the best path for the packet to reach the destination. 
+                        It maintains a routing table which is made using different algorithms by the router only.<br>
+                        There are 2 types of Routing Tables:<br>      
+                        <ul>
+                         <li>Static</li>
+                         <li>Dynamic</li>
+                        </ul>
+                    </li>
+                   </ul>
+
+                        <center>
+                        <img src="images/Routers.png" alt="Router">
+                        <figcaption><strong>Fig. 7 Router</strong></figcaption>     
+                       </center><br>
+                   
+                       <h4>How does Router work?</h4>
+                   
+                        A router analyzes a destination IP address of a given packet header and compares it with the routing table to decide the packet&#39;s next path. 
+                        The list of routing tables provides directions to transfer the data to a particular network destination. 
+                        They have a set of rules that compute the best path to forward the data to the given IP address.
+                   
+                        Routers use a modem such as a cable, fiber, or DSL modem to allow communication between other devices and the internet. 
+                        Most of the routers have several ports to connect different devices to the internet at the same time. 
+                        It uses the routing tables to determine where to send data and from where the traffic is coming.
+                        
+                        <center>
+                        <img src="images/working_router.png" alt="Router">
+                        <figcaption><strong>Fig. 8 Illustration of routers connected to different devices</strong></figcaption>     
+                        </center><br>
+                   
+                        <h4>Advantages of Routers</h4>
+                        <ul>
+                            <li>Determines the most efficient path between source and destination using dynamic routing algorithms such as OSPF, BGP, RIP, etc.</li>
+                            <li>Reduces network traffic by creating the collision domains and broadcast domains.</li>
+                            <li>Provides connection among different network architecture.</li>
+                            <li>Connects multiple users to a single network connection.</li>
+                        </ul>
+                   
+                        <h4>Disadvantages of Routers</h4>
+                        <ul>
+                            <li>Hardware-based routers are vulnerable to cyber attackers since they contain software called firmware. 
+                                Unpatched routers are quite vulnerable to cyber attacks.</li>
+                            <li>Since routers analyze data transmission from physical to network layer, they are slower than repeaters and bridges.</li>
+                            <li>There is less bandwidth for user data since dynamic router communications cause additional network overhead.</li>
+                        </ul>
+                       </li><br>
+
+                    <li><strong>Switch</strong><br>
+                    
+                        Switch is a network device that is used to segment the networks into different subnetworks called subnets or LAN segments. 
+                        Switch connects other devices to Ethernet networks through twisted pair cables. 
+                        It maintains a list of network addresses of all the devices connected to it. 
+                        It is responsible for filtering and forwarding the packets between LAN segments based on MAC address. 
+                        On receiving a packet, it checks the destination address and transmits the packet to the correct port.
+                   
+                       <h4>Functions of Switch</h4>  
+                       <ul>
+                           <li>It operates in Data Link Layer in OSI Model.</li>
+                           <li>Before forwarding, the packets are checked for network errors.</li>
+                           <li>It transfers the data only to the device that has been addressed.</li>
+                           <li>The data is transmitted in full duplex mode.</li>
+                           <li>It allocates each LAN segment a limited bandwidth.</li>
+                       </ul>
+
+                        <center>
+                        <img src="images/Switch.png" alt="Switch">
+                        <figcaption><strong>Fig. 9 Switch</strong></figcaption>     
+                        </center><br>
+                   
+                        Switching techniques are used to decide best route for data transmission between source and destination. These are classified in three categories :<br>
+                        <ol>
+                            <li>Circuit Switching</li>
+                            <li>Message Switching</li>
+                            <li>Packet Switching</li>
+                        </ol>
+                   
+                        <h4>Advantages </h4> 
+                        <ul>
+                           <li>Prevents traffic overloading in a network by segmenting the network into smaller subnets.</li>
+                           <li>Increases the bandwidth of the network.</li>
+                           <li>Less frame collision as switch creates the collision domain for each connection.</li>
+                       </ul>
+                   
+                        <h4>Disadvantages</h4>
+                        <ul>
+                           <li>It can not stop traffic destined for a different LAN segment from travelling to all other LAN segments.</li>
+                       </ul>
+                        </li><br>
+
+                        <li>
+                            <strong>Modem</strong><br>
+                    
+                         Modem is a device that enables a computer to send or receive data over telephone or cable lines. 
+                         The main function of the modem is to convert digital signal into analog and vice versa. 
+                         Modem is a combination of two devices − modulator and demodulator. 
+                         The modulator converts digital data into analog data when the data is being sent by the computer. 
+                         The demodulator converts analog data signals into digital data when it is being received by the computer.
+                         
+                         <center>      
+                         <img src="images/Modem.png" alt="Modem">
+                         <figcaption><strong>Fig. 10 Modem</strong></figcaption>     
+                         </center><br>
+                    
+                         <h4>How does modem work?</h4>
+                         The modem is placed between the telephone line and the computer system or router. It connects the devices with the ethernet port given in it. 
+                         It connects the ISP(internet service provider) to the home network directly for the single PC. Or it is connected with the router to connect with multiple devices.
+                    
+                         The below diagram is converting the incoming analog signal coming from telephone-lines/optical fiber to a digital signal and sending it to the PC. 
+                         Without a modem, we cannot connect to the internet.<br>
+                         
+                         <center>
+                          <img src="images/ModemWorking.png" alt="Modem">
+                          <figcaption><strong>Fig. 11 Modulation</strong></figcaption>    
+                          </center>
+                    
+                         <h4>Types of Modems:-</h4> 
+                         <ul>
+                            <li>Cable Modem - The cable modem is known as the broadband device as it allows the computer to communicate with ISP over a landline connection. 
+                                It is connected with the landline connection using the coaxial cable and with the computer using the ethernet.</li>
+                            <li>DSL Modem - DSL stands for Digital Subscriber line that allows the transmission of data over the normal telephone line. 
+                                It can be used to connect to a computer or router to provide the internet connection through the ethernet port or USB port.</li>
+                            <li>2-wire Modem - It use the same pair of wires for outgoing and incoming carriers.</li>
+                            <li>4-wire Modem - In a 4-wire connection, one pair of wires is used for the outgoing carrier and the other pair is used for incoming carrier.</li>
+                            <li>Half duplex − A half-duplex modem has the capacity to transfer data in both the directions but only one at a time.</li>
+                            <li>Full duplex − A full duplex modem can transmit data in both the directions simultaneously.</li>
+                        </ul>
+                    
+                        </li><br>
+
+                        <li>
+                            <strong>RJ45 connector</strong><br>
+                            RJ45 is the acronym for Registered Jack 45. 
+                            RJ45 connector is an 8-pin jack used by devices to physically connect to Ethernet based local area networks (LANs). 
+                            Ethernet is a technology that defines protocols for establishing a LAN. 
+                            The cable used for Ethernet LANs are twisted pair ones and have RJ45 connector pins at both ends. 
+                            These pins go into the corresponding socket on devices and connect the device to the network.
+                            <center>
+                       
+                            <img src="images/RJ45.png" alt="RJ45">
+                            <figcaption><strong>Fig. 12 RJ45</strong></figcaption>     
+                            </center>
+                        </li>
+
+                        <li>
+                            <strong>Ethernet Card</strong><br>
+                            Ethernet card, also known as network interface card (NIC), is a hardware component used by 
+                            computers to connect to Ethernet LAN and communicate with other devices on the LAN. 
+                            The earliest Ethernet cards were external to the system and needed to be installed manually. 
+                            In modern computer systems, it is an internal hardware component. 
+                            The NIC has RJ45 socket where the network cable is physically plugged in. 
+                            Modern cards support fast Ethernets up to a speed of 100 Mbps. Some cards even have capacity of 1 Gbps.
+                            <center>
+                       
+                            <img src="images/EthernetCard.png" alt="Ethernet Card">
+                            <figcaption><strong>Fig. 13 Ethernet Card</strong></figcaption>      
+                            </center>
+                        </li>
+
+                        <li><strong>Gateway</strong><br>
+                    
+                            Gateway is a network device used to connect two or more dissimilar networks. 
+                            In networking parlance, networks that use different protocols are dissimilar networks. 
+                            A gateway usually is a computer with multiple NICs connected to different networks. 
+                            Gateways provide translation between networking technologies such as Open System Interconnection (OSI) and Transmission Control Protocol/Internet Protocol (TCP/IP). 
+                            Because of this, gateways connect two or more autonomous networks, each with its own routing algorithms, protocols, topology, domain name service, and network administration procedures and policies. 
+                            Gateway uses packet switching technique to transmit data from one network to another. 
+                            In this way it is similar to a router, the only difference being a router can transmit data only over networks that use the same protocols.
+                           <center>
+                       
+                            <img src="images/Gateway.png" alt="Gateway">
+                            <figcaption><strong>Fig. 14 Gateway</strong></figcaption>     
+                            </center>
+                        </li>
+
+                        <li>
+                            <strong>Wifi Card</strong><br>
+                    
+                            Wi-Fi is the acronym for wireless fidelity. Wi-Fi technology is used to achieve wireless connection to any network. 
+                            Wi-Fi card is a card used to connect any device to the local network wirelessly. T
+                            he physical area of the network which provides internet access through Wi-Fi is called Wi-Fi hotspot. 
+                            Hotspots can be set up at home, office or any public space. 
+                            Hotspots themselves are connected to the network through wires. 
+                            A Wi-Fi card is used to add capabilities like teleconferencing, downloading digital camera images, video chat, etc. to old devices. 
+                            Modern devices come with their in-built wireless network adapter.
+                            <center>
+                       
+                            <img src="images/WifiCard.png" alt="Wifi Card">
+                            <figcaption><strong>Fig. 15 Wifi Card</strong></figcaption>     
+                            </center>
+                        </li>
+
+                        <li>
+                            <strong>Repeater</strong><br>
+                    
+                         A repeater is an electronic device that amplifies the signal it receives.When the incoming signals are attenuated, 
+                         it copies them bit by bit and retransmits them at their original strength. 
+                         You can think of a repeater as a device which receives a signal and retransmits it at a higher level or 
+                         higher power so that the signal can cover longer distances, more than 100 meters for standard LAN cables. 
+                         Repeaters work on the Physical layer and it is a two-port devices.<br>
+                         Let&#39;s understand about repeaters with an example:
+                    
+                         Assume that one person communicates with the other using a one-to-one communication device such as a walkie-talkie. 
+                         If there is a clear path between the two points, the data can be transmitted successfully. 
+                         If there is a hill or mountain in the way, the data cannot be delivered flawlessly.
+                    
+                         As a result, an antenna is placed between the two devices to avoid this situation, as shown in fig. 16<br>
+                         <center>
+                    
+                         <img src="images/Repeater.png" alt="Repeater">
+                         <figcaption><strong>Fig. 16 Example of repeater</strong></figcaption>     
+                         </center><br>
+                    
+                         <h4>There are different types of repeaters:-</h4>
+                         <ol>
+                            <li><strong>On basis of the types of signals generated</strong>
+                                <ul>
+                                   <li>Digital repeaters : Data is transmitted in the form of binary digits such as 0s and 1s. 
+                                    While transmitting data, 0 and 1 values are generated, and it can transmit data over long distances. 
+                                    This repeater is capable of retiming and resynchronizing.</li>
+                                   <li>Analog Repeaters : Data is transmitted in the form of analog signals to increase the amplitude of the data. 
+                                    These repeaters are used in trunk lines to help broadcast multiple signals using frequency division multiplexing (FDM).</li>
+                               </ul>
+                            </li>
+
+                            <li><strong>On basis of types of network-connected</strong>
+                                <ul>
+                                   <li>Wired Repeaters : They are used in wired LANs. For example OCRs</li>
+                                   <li>Optical communications Repeater (OCR) : These are devices that extend the range of signals carried by a fiber optic cable. Digital signals are transmitted as a short pulse of light through a fiber optic cable in this repeater. Photons are tiny particles of light that can be absorbed or scattered in the fiber.
+                           
+                                       On the other hand, optical amplifiers are designed for repeaters to amplify light without first converting it to an electric signal. </li>
+                                   <li>Wireless Repeaters : They are used in wireless LANs and cellular networks. For example telephone repeaters, and radio repeaters.</li>
+                                   <li>Telephone Repeater : Long-distance communications are carried out over telephone networks. 
+                                    To increase the power, a transistor-based amplifier is maintained. 
+                                    This telephone network is a bidirectional communication system in which audio signals transmit data. 
+                                    These telephone services are primarily used in submarine communications.</li>
+                                   <li>Radio Repeater : It is used to extend the range of radio signal coverage. 
+                                    A radio repeater is a device that consists of a radio transmitter and a radio receiver. 
+                                    The received signals are amplified and retransmitted frequently at different frequencies to provide coverage beyond the obstruction.</li>
+                               </ul>
+                            </li>
+
+                            <li><strong>On basis of the domain of LANs connected</strong>
+                                <ul>
+                                   <li>Local Repeaters : They connect LAN segments separated by small distances.</li>
+                                   <li>Remote Repeaters : They connect LANs that are far from each other.</li>
+                               </ul>
+                            </li>
+                         </ol>
+                       
+                    
+                         <h4>Advantages of repeater:</h4>
+                         <ul>
+                            <li>The Repeater supports the signal strength.</li>
+                            <li>These Repeaters are both cheap and easy to use.</li>
+                            <li>The Repeaters have no impact on the network&#39;s performance.</li>
+                            <li>These Repeaters are capable of retransmitting data and boosting weak signals.</li>
+                        </ul>
+
+                    
+                        <h4>Disadvantages of repeater:</h4>
+                         <ul>
+                            <li>The number of collisions increases as the number of repeaters increases.</li>
+                            <li>Only a limited number of repeaters can be connected to it.</li>
+                            <li>We can&#39;t connect the different network architectures in repeaters.</li>
+                            <li>The data traffic in the Repeaters cannot be reduced.</li>
+                        </ul>
+                        </li><br>
+
+                        <li>
+                            <strong>Network Interface Card (NIC)</strong><br>
+                    
+                            NIC allows a networking device to communicate with the other networking device. 
+                            NIC converts the data packets between two different data transmission technologies. 
+                            A PC uses parallel data transmission technology to transmit the data between its internal parts 
+                            while the media that provides connectivity between different PCs uses serial data transmission technology. 
+                       
+                           <h4>Types of NIC:-</h4>
+                            <ul>
+                                <li>Internal NIC - For an internal network interface card, the motherboard has a slot for the network card where it can be inserted.
+                                    <center>
+                                        <img src="images/internal_nic.jpg" alt="NIC">
+                                        <figcaption><strong>Fig. 17 Internal NIC</strong></figcaption>     
+                                        </center><br>
+                                </li>
+                                <li>External NIC - The motherboard does not have a slot where NIC can be inserted. 
+                                    Hence, these network interface cards use an antenna to offer wireless reception via radio frequency waves. 
+                                    <center>
+                       
+                                        <img src="images/external_nic.jpg" alt="NIC">
+                                        <figcaption><strong>Fig. 18 External NIC</strong></figcaption>      
+                                        </center><br>
+                                </li>
+                       
+                            </ul>
+
+                            <h4>How does a NIC card work?</h4>
+                       
+                            Operating as an interface, a NIC card can transmit signals at the physical layer and deliver data packets at the network layer. 
+                            Irrespective of location, the NIC card acts as a middleman between a computer, or server, and a data network. 
+                            When a user requests a web page, the LAN card gets data from the user device, sends it to the server via the Internet, 
+                            and gets the required data back from the Internet to display for users.
+                            <center>
+                            <img src="images/working_nic.jpg" alt="NIC">
+                            <figcaption><strong>Fig. 19 Example of NIC</strong></figcaption>     
+                            </center><br>
+                       
+                       
+                            <h4>Advantages of NIC</h4>
+                            <ul>
+                               <li>As compared to the wireless network card, NIC provides a secure, faster, and more reliable connection.</li>
+                               <li>NIC allows us to share bulk data among many users.</li>
+                               <li>It helps us to connect peripheral devices using many ports of NIC.</li>
+                               <li>Communication speed is high.</li>
+                               <li>Network Interface cards are not expensive.</li>
+                           </ul>
+                      
+                       
+                                <h4>Disadvantages of NIC</h4>
+                            <ul>
+                               <li>NIC is inconvenient as compared to the wireless card.</li>
+                               <li>For wired NIC, a hard-wired connection is required.</li>
+                               <li>NIC needs a proper configuration to work efficiently.</li>
+                               <li>NIC cards are not secure, so the data inside NIC is not safe.</li>
+                           </ul>
+                       
+                        </li><br>
+
+                        <li>
+                            <strong>MAU and Patch Panel</strong><br>
+                    
+                            MAU and Patch Panel look like the Hub, but they are different. MAU (Multi Access Unit) is the sibling of Hub for the token ring network. 
+                            Differences between Hub and MAU are the following: -  
+                            <ul>
+                                <li>Hub is used for the Ethernet Network while the MAU is used for the Token ring network.</li>
+                                <li>Hub creates logically star topology while MAU creates logically ring topology.</li>
+                            </ul>
+
+                            <center>          
+                            <img src="images/MAU.jpg" alt="MAU">
+                            <figcaption><strong>Fig. 20 Multi Access Unit</strong></figcaption>     
+                            </center><br>
+
+                        </li>
+
+                        <li>
+                            <strong>Proxy</strong><br>
+                    
+                            Proxy is used to hide the internal network from the external world. It can be a dedicated device or can be an application software. 
+                            Once it is configured, all communication goes through it. Since external devices cannot access the internal devices directly, 
+                            they cannot tamper with the internal devices.<br>
+                            <center>
+                            <img src="images/Proxy-Server.png" alt="Proxy">
+                            <figcaption><strong>Fig. 21 Proxy</strong></figcaption>      
+                            </center><br>
+                        </li>
+
+                        <li>
+                            <strong>Transceiver</strong><br>
+                    
+                            Transceiver is a small device that has the capability of receiving and sending both types of signals; 
+                            analog and digital. Usually, it is inbuilt in network interface card. But, it is also available as an individual device. 
+                            It detects the type of signal from the network wire and converts the passing signal accordingly. 
+                            For example, a transceiver is attached with a device that transmits signal in digital form. 
+                            Now suppose, this device is connected with the network wire that uses analog form for data transmission. 
+                            In this case, the transceiver converts digital signals in the analog signals before placing them in the network wire.
+                       
+                            <center>
+                            <img src="images/Transceiver.png" alt="Transceiver">
+                            <figcaption><strong>Fig. 22 Transceiver</strong></figcaption>     
+                            </center><br>
+                        </li>
+
+                        <li>
+                            <strong>Firewall</strong><br>
+                    
+                            In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. 
+                            A firewall typically establishes a barrier between a trusted internal network and untrusted external network, such as the Internet. 
+                            Firewalls are often categorized as either network firewalls or host-based firewalls. 
+                            Network firewalls filter traffic between two or more networks and run on network hardware. 
+                            Host-based firewalls run on host computers and control network traffic in and out of those machines.
+                       
+                             <center>
+                            <img src="images/Firewall.png" alt="Firewall">
+                            <figcaption><b>Fig. 23 Firewall</b></figcaption>     
+                            </center>
+                        </li>
+                   </ol>
+
+                    
+                    </div>
+                    
+
+                    
+                    
+                   
+                </section>
+            <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+<footer class="main-footer">
+	<h4 align="center">Lab contributed by IITR, Roorkee </h4>
+</footer>
+<!-- /.control-sidebar -->        </div>
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

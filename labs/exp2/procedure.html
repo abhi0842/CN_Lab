@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="bootstrap2.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+            </div>
+            <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+                height: 50px;
+                width: 400px;"></span></a>
+            
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo" style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          ">
+        <p align="center" style="font-size: 1em; color: white">
+          <b>Computer Network</b>
+        </p>
+      </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network<!-- Write your lab name --></a>
+                        </li>
+                        <li>
+                            <a href="#">GO-BACK-N ARQ<!-- Write your experiment name --></a>
+                        </li>
+                        <li class="active">Procedure</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="posttest.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="reference.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="contri">
+                        <a href="contributors.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Contributors</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Implementation of Go-Back-N ARQ Flow Control Protocol
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h3">Procedure</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+
+                    </div>
+                </div>
+                <div>   
+                    <h3>General Instructions</h3>
+                    
+                <ol style="font-size: 1.2em;text-align: justify;">
+                    <li>The aim is to introduce the students to the working of the Go-back-N ARQ and how it behaves under the situations such as frame lost or Acknowledgement Lost.</li>
+                    <li>Once redirected to simulation page (default for window size 3), then they are required to choose the frame size for which the simulation is desired.</li>
+                    <li>For the respective frame size, the simulation begins with an array (labeled as Frames) representing the frames on the left side of the page and the instructions prompted on the right side of the page.</li>
+                    <li>The user needs to make the right selections in the array for the simulation to run further. </li>
+                    <li>If the user fails to select the correct frame at any point of simulation, the “Wrong Frame Selected” is prompted on the right side of the screen and until the user successfully selects the correct frame, the simulation does not proceed and the User is given as many retries as needed.</li>
+                    <li>An index is provided to the left of the screen to allow the user to understand which color signifies what behaviour.</li>
+                </ol>
+
+                <h3>For a window size of 3, follow these steps:</h3>
+                <ol style="font-size: 1.2em;text-align: justify;">    
+                        <li>Firstly, select the first three frames to be sent to the receiver, i.e., 1,2,3 and now wait to receive the acknowledgment of the 1st frame.</li>
+                        <li>After ACK 1 received, select the next frame to be sent i.e., 4.</li>
+                        <li>ACK 2 lost in between, retransmit all the frames of the current window i.e., 2,3,4.</li>
+                        <li>After ACK 2 received, select the next frame to be sent i.e., 5.</li>
+                        <li>After ACK 3 received, select the next frame to be sent i.e., 6.</li>
+                        <li>After ACK 4 received, select the next frame to be sent i.e., 7.</li>
+                        <li>ACK 5 not received, retransmit all the frames of the current window.</li>
+                        <li>After ACK 5, 6, 7 received, select the next three frames to be sent.</li>
+                        <li>ACK 8, 9, 10 received, ALL FRAMES SENT!</li>
+                        <li>Input the correct total number of frames transmitted and click the <b>Submit</b> button.</li>
+                        <li>Select other window size to perform simulation.</li>   
+                </ol>
+
+                <h3>For a window size of 4, follow these steps:</h3>
+                <ol style="font-size: 1.2em;text-align: justify;">    
+                    <li>Firstly, select the first four frames to be sent to the receiver, i.e., 1,2,3,4, and now wait to receive the acknowledgment of the 1st packet.</li>
+                    <li>After ACK 1 received, select the next frame to be sent i.e., 5th and the window will slide having four frames, i.e., 2, 3, 4, 5.</li>
+                    <li>After ACK 2 received, select the next frame to be sent i.e., 6th and the window will slide having four frames, i.e., 3, 4, 5, 6.</li>
+                    <li>Retransmit all the frames of the current window i.e., 3, 4, 5, 6 because packet 3 lost.</li>
+                    <li>After ACK 3, 4 ,5, 6 received, select the next four frames to be sent.</li>
+                    <li>ACK 7 lost, so retransmit all the frames of the current window i.e., 7, 8, 9, 10.</li>
+                    <li>ACK 7, 8, 9, 10 received, ALL FRAMES SENT!</li>
+                    <li>Input the correct total number of frames transmitted and click the <b>Submit</b> button.</li>
+                    <li>Select other window size to perform simulation.</li>  
+                </ol>
+
+                <h3>For a window size of 5, follow these steps:</h3>
+                <ol style="font-size: 1.2em;text-align: justify;">    
+                    <li>Firstly, select the first five frames to be sent to the receiver, i.e., 1,2,3,4,5, and now wait to receive the acknowledgment of the 1st packet.</li>
+<li>After ACK 1 received, select the next frame to be sent i.e., 6th and the window slides containing five frames, i.e., 2, 3, 4, 5, 6.</li>
+<li>After ACK 2 received, select the next frame to be sent i.e., 7th and the window slides containing five frames, i.e., 3, 4, 5, 6, 7.</li>
+<li>ACK 3 not received because the acknowledgment is lost, retransmit all the frames of the current window i.e., 3, 4, 5, 6, 7.</li>
+<li>After ACK 3 received, select the next frame to be sent i.e., 8.</li>
+<li>After ACK 4 received, select the next frame to be sent i.e., 9.</li>
+<li>After ACK 5 received, select the next frame to be sent i.e., 10.</li>
+<li>ACK 6 not received, retransmit all the frames of the current window i.e., 6, 7, 8, 9, 10.</li>
+<li>ACK received for all frames, ALL FRAMES SENT!</li>
+<li>Input the correct total number of frames transmitted and click the <b>Submit</b> button.</li>
+<li>Select other window size to perform simulation.</li> 
+                </ol>
+
+                </div>
+            </section>
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by IITR, Roorkee</h4>
+        </footer>
+        <!-- /.control-sidebar -->
+    </div>
+</body>
+
+</html>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

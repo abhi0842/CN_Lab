@@ -1,0 +1,354 @@
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <style>
+              
+          .quiz {
+            padding: 0px 0px 0px 0px;
+            width: 85%;
+            
+            margin: 0 auto;
+          }
+          .quiz ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          .quiz-question {
+            font-weight: 600;
+            display: block;
+            padding: 30px 20px 10px 20px;
+            margin: 0;
+          }
+          .quiz-answer {
+            margin: 0;
+            padding: 10px 20px 10px 20px;
+            
+            background: #f7f7f7;
+            margin-bottom: 5px;
+            cursor: pointer;
+          }
+          .quiz-answer:hover {
+            background: #eee;
+          }
+          .quiz-answer:before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #ccc;
+            background: #fff;
+            vertical-align: middle;
+            margin-right: 10px;
+          }
+          .quiz-answer.active:before {
+            background-color: #333;
+            border-color: #333;
+          }
+          .quiz-answer.correct:before {
+            background-color: green;
+            border-color: green;
+          }
+          .quiz-answer.incorrect:before {
+            background-color: red;
+            border-color: red;
+          }
+          .quiz-answer.active.correct:before {
+            outline: 2px solid green;
+            outline-offset: 2px;
+          }
+          .quiz-result {
+            max-width: 960px;
+            margin: 0 auto;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            padding: 0px;
+          }
+          .quiz-result.good {
+            background: green;
+          }
+          .quiz-result.mid {
+            background: orange;
+          }
+          .quiz-result.bad {
+            background: red;
+          }
+          </style>
+        
+        <script>
+            window.onload = function () {
+                document.getElementById("posttest").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"  href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+        height: 50px;
+        width: 400px;"></span></a>
+    </div>
+    
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+        <p align="center" style="font-size:1em;"><b>Computer Network</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network</a>
+              </li>
+              <li>
+                <a href="#">Demonstration and Implementation of cryptographic algorithms</a>
+              </li>
+              <li class="active">Post Test</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+         
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+               
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="contri">
+                  <a href="contributors.html">
+                      <i class="fa fa-files-o"></i>
+                      <span>Contributors</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                  Demonstration and Implementation of Cryptographic Algorithms <!-- Write experiment name here --> 
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:3%"> Post Test </h3>
+                    <p style="font-size:130%; margin-top:2%">
+
+                  
+                   
+                 
+  
+                      <div>
+                        <script>
+                                 
+                          function result() {
+                    if (document.getElementById('q11').checked) {
+                     document.getElementById('q1c').innerHTML = "Correct";
+                    } else {
+                     document.getElementById('q1w').innerHTML = "Wrong Answer, the correct option is A ";
+                    
+                    }
+                    
+                    if (document.getElementById('q23').checked) {
+                     document.getElementById('q2c').innerHTML = "Correct";
+                    } else {
+                     document.getElementById('q2w').innerHTML = "Wrong Answer, the correct option is C ";
+                    
+                    }
+                    
+                    if (document.getElementById('q34').checked) {
+                     document.getElementById('q3c').innerHTML = "Correct";
+                    } else {
+                     document.getElementById('q3w').innerHTML = "Wrong Answer, the correct option is D ";
+                    
+                    }
+                    if (document.getElementById('q41').checked) {
+                     document.getElementById('q4c').innerHTML = "Correct";
+                    } else {
+                     document.getElementById('q4w').innerHTML = "Wrong Answer, the correct option is A ";
+                    
+                    }
+                    if (document.getElementById('q53').checked) {
+                     document.getElementById('q5c').innerHTML = "Correct";
+                    } else {
+                     document.getElementById('q5w').innerHTML = "Wrong Answer, the correct option is C ";
+                    
+                    }
+                    
+                    }
+                    
+                         </script>
+                    
+                    <ol style="font-size: 1.2em;text-align: justify;">
+                      <li>Cryptography is the study and practice of techniques for secure communication in the presence of third parties called?</li>
+                      <input type="radio" id="q11" name="q1" value="a"> a. Adversaries<br>
+                      <input type="radio" id="q12" name="q1" value="b"> b. Security<br>
+                      <input type="radio" id="q13" name="q1" value="c"> c. RSA<br>
+                      <input type="radio" id="q14" name="q1" value="d"> d. XOR<br>
+                      <p id="q1c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                      <p id="q1w" style="color:red; font-size:18px; font-weight:bold;"></p>
+                    
+                      <li>What is a cipher?
+                      </li>
+                      <input type="radio" id="q21" name="q2" value="1"> a. Plain text<br>
+                      <input type="radio" id="q22" name="q2" value="2"> b. Asymmetric key algorithm<br>
+                      <input type="radio" id="q23" name="q2" value="2"> c. A secret or disguised way of writing<br>
+                      <input type="radio" id="q24" name="q2" value="2"> d. None of the above<br>
+                      <p id="q2c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                      <p id="q2w" style="color:red; font-size:18px; font-weight:bold;"></p>
+                    
+                      <li>What is the formula to decrypt the message in RSA?</li>
+                      <input type="radio" id="q31" name="q3" value="1"> a. P = n^d ( mod n )<br>
+                      <input type="radio" id="q32" name="q3" value="2"> b. P = c^d ( mod c )<br>
+                      <input type="radio" id="q33" name="q3" value="3"> c. P = C^d ( mod d )<br>
+                      <input type="radio" id="q34" name="q3" value="4"> d. P = C^d ( mod n )<br>
+                      <p id="q3c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                      <p id="q3w" style="color:red; font-size:18px; font-weight:bold;"></p>
+                    
+                      <li>A combination of an encryption algorithm and a decryption algorithm is called a _________.</li>
+                      <input type="radio" id="q41" name="q4" value="1"> a. Cipher<br>
+                      <input type="radio" id="q42" name="q4" value="2"> b. Secret<br>
+                      <input type="radio" id="q43" name="q4" value="3"> c. Key<br>
+                      <input type="radio" id="q44" name="q4" value="4"> d. None of the above<br>
+                      <p id="q4c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                      <p id="q4w" style="color:red; font-size:18px; font-weight:bold;"></p>
+                    
+                      <li>The acronym DES stands for?</li>
+                      <input type="radio" id="q51" name="q5"> a. Digital Evaluation System<br>
+                      <input type="radio" id="q52" name="q5"> b. Digital Encryption System<br>
+                      <input type="radio" id="q53" name="q5"> c. Data Encryption Standard<br>
+                      <input type="radio" id="q54" name="q5"> d. Double Encryption Standard<br>
+                      <p id="q5c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                      <p id="q5w" style="color:red; font-size:18px; font-weight:bold;"></p>
+                    
+                      <button id="result" onclick="result();this.disabled=true;" type="submit" class="btn btn-primary">Submit</button>
+                    </ol>
+                    
+                      </div>
+
+                    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+                      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by IITR, Roorkee <!-- Institute Name --> </h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

@@ -1,0 +1,423 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script>
+            window.onload = function () {
+                document.getElementById("theory").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+        height: 50px;
+        width: 400px;"></span></a>
+    </div>
+    
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+        <p align="center" style="font-size:1em;"><b>Computer Network</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network</a>
+              </li>
+              <li>
+                <a href="#">Dynamic Routing Protocol</a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+          
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+              
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="contri">
+                  <a href="contributors.html">
+                      <i class="fa fa-files-o"></i>
+                      <span>Contributors</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                  Implementation of Dynamic Routing Protocol <!-- Write experiment name here --> 
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                 
+                    <h3 style="margin-top:3%">Introduction</h3>
+<div style="text-align:justify;font-size: 1.2em;">
+Routing protocols, according to the OSI routing framework, are layer management protocols for the network layer that specify how routers communicate with each other to distribute information and data that helps them to select routes between any two nodes on a computer network. Data packets are forwarded through the networks of the internet from one router to the other router until they reach their destination computer. Each router has a prior knowledge only of networks(nodes) attached to it directly. A routing protocol shares this information first among it’s immediate neighbours, and then throughout the network.<br>
+There Are various Algorithms used for this, some of them discussed in our project are:<br>Routing is divided into two categories:
+<ol>
+  <li>Static Routing</li>
+  <li>Dynamic Routing
+    <ul>
+      <li>Routing Information Protocol (RIP)</li>
+      <li>Open Shortest Path First (OSPF)</li>
+      <li>Border Gateway Protocol (BGP)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Dynamic Routing:</h3>
+
+Dynamic router, also called adaptive routing, is a process whereby a router can transmit data through a different route or on the one it is assigned depending on the current state of the communication circuits within the system. Dynamic routing uses complex routing algorithms that do not provide high security like static routing. When the network change occurs, it sends the message to the router to ensure that the routes are then recalculated for sending updated routing information. In short, dynamic routing is automated and does not require information to be entered manually like static routing. Dynamic routing is usually implemented in large networks.
+
+
+<h3>i) Routing information Protocol (RIP)</h3>
+
+Routing Information Protocol (RIP) is an implementation of the distance vector protocol. RIP is an intra-domain routing protocol used within an autonomous system. Here, intra-domain means routing the packets in a defined domain. It is one of the oldest dynamic routing protocols which uses hop count (number of routers occurring in between the source and destination network) as a routing metric to find the best path between the source and the destination network. Updates (routing information) is broadcasted, sending the entire updated table, the information is updated periodically (after every 30sec). It works on the principle of Bellman Ford Algorithm.
+
+<h4><strong>Bellman-Ford’s Algorithm</strong></h4>
+
+The distance vector routing protocol uses the basic principle of the Bellman-Ford Algorithm to identify the shortest path through the network. So, let us take a quick review of Bellman-Ford’s algorithm.
+
+To calculate the shortest distance follow the following steps:
+<ul>
+  <li>Initially, the cost or a distance of a node to itself is set to 0.</li>
+  <li>The cost of a node to any other node is set to infinity ‘∞’ if the nodes are not connected directly.</li>
+</ul>
+
+The minimal distance between the two nodes in a graph is calculated using the method below:<br>
+
+<center>
+  <strong>D<sub>ij</sub></strong> = min {(C<sub>i1</sub> + D<sub>1j</sub>), (C<sub>i2</sub> + D<sub>2j</sub>), … (C<sub>iN</sub> + D<sub>Nj</sub>)}
+</center>
+
+<br>where,<br>
+<ul>
+  <li>D<sub>ij</sub> shortest distance between node i and j,</li>
+  <li>C<sub>i1</sub> cost between node i and node 1</li>
+</ul>
+
+This algorithm is repeated until we find the shortest distance vector between two nodes.<br>
+
+<h4><strong>Distance Vector Routing Algorithm</strong></h4>
+
+
+Bellman-Ford’s algorithm was designed with the view that we have all the initial information about each node in the graph at the same place. So, the Bellman-Ford algorithm was able to generate a result for each node synchronously.
+
+In distance vector routing algorithm, we have to create the routing table for the routers in the autonomous system. In the autonomous system there can be changes like a new router has been added to the system or some network has stopped the services to a router or a link has failed.
+
+In such situations, the routing table of every router must be updated asynchronously. Because a router has to update its routing table on the basis of information it receives from its neighbouring routers. So, the Bellman-Ford algorithm needs to be modified to design the distance vector routing algorithm:
+<ul>
+  <li>In distance vector routing algorithm, the cost is considered as the hop count (number of networks passed to reach the destination node). So a cost between two neighbouring routers is set to 1.</li>
+  <li>Each router updates its routing table when it receives the information (distance vector) form the neighbouring routers.</li>
+  <li>After updating its routing table, a router must forward its result to its neighbouring router. So that they can update their routing table.</li>
+  <li>Each router keeps the three information in its routing table i.e., destination network, cost &amp; the next hop.</li>
+  <li>The router sends the information of each route as a record R.</li>
+</ul>
+
+
+<strong>Example: </strong>
+
+Consider 3-routers X, Y and Z as shown in figure. Each router have their routing table. Every routing table will contain distance to the destination nodes.<br><center>
+
+<img src="images/DVP1.jpg" alt="example">
+<figcaption><strong>Fig. 1 Routing table of X, Y and Z</strong></figcaption>
+</center><br>
+
+
+Consider router X , X will share it routing table to neighbors and neighbors will share it routing table to it to X and distance from node X to destination will be calculated using bellmen- ford equation.
+<br><br>
+<center><b>Dx(y)</b> = min { C(x,v) + Dv(y)} for each node y ∈ N</center><br>
+
+As we can see that distance will be less going from X to Z when Y is intermediate node(hop) so it will be update in routing table X.
+
+<center>
+<img src="images/dvp2.jpg" alt="example">
+<figcaption><strong>Fig. 2 Updated routing table of X</strong></figcaption>
+</center><br>
+
+Similarly for Z also –
+
+<center>
+<img src="images/dvp3.jpg" alt="example">
+<figcaption><strong>Fig. 3 Updated routing table of Y</strong></figcaption>
+</center><br>
+
+Finally the routing table for all –
+<center>
+
+<img src="images/dvp4.jpg" alt="example">
+<figcaption><strong>Fig. 4 Final routing table</strong></figcaption>
+</center><br>
+
+
+<h3>Advantages of RIP</h3> 
+<ul>
+  <li>It is easy to configure.</li>
+  <li>It has less complexity.</li>
+  <li>The CPU utilization is less.</li>
+</ul>
+
+
+
+<h3>Disadvantages of RIP</h3> 
+<ul>
+  <li>In RIP, the route is chosen based on the hop count metric. If another route of better bandwidth is available, then that route would not be chosen.</li>
+  <li>It broadcasts the routing updates to the entire network that creates a lot of traffic.</li>
+  <li>RIP supports maximum 15 hops which means that the maximum 16 hops can be configured in a RIP.</li>
+  <li>The RIP protocol has the highest Administrative distance value (i.e., 120), so it is not as reliable as the other routing protocols.</li>
+</ul>
+
+
+<h3>ii) Open Shortest Path First (OSPF)</h3> 
+
+Open Shortest Path First is a routing protocol for Internet Protocol networks. It is an intra-domain protocol, which means that it is used within an area or a network. It works on the link state routing algorithm in which each router contains the information of every domain, and based on this information, it determines the shortest path. It falls into the group of interior gateway protocols, operating inside a single autonomous system. It works on the principle of Dijkstra&#39;s algorithm, also known as the shortest path first (SPF) algorithm. OSPF uses the flooding technique that is, it checks all possible routes between source and destination and picks the shortest route(best route).
+
+<br><br>
+<strong>Initialization:</strong> 
+<ul>
+  <li>Select the root node.</li>
+  <li>Set the shortest distance from the root node to every other node as the cost between the root node and that corresponding node.</li>
+  <li>The shortest distance between root node to root node is 0.</li>
+</ul>  
+
+<strong>Iteration:</strong> This step is repeated until all the routers are added to the root node. This step has two sub-steps:
+<ul>
+  <li>Add the next node: Search the next node that is not in the path of the root node and select node with minimum cost. Add the selected node to the path.</li>
+  <li>Update: Now update the shortest distance for the rest of the nodes in the domain using the shortest distance of the node that we have just added to the path of step 2.</li>
+</ul>
+
+
+<center><b>D<sub>j</sub></b> = minimum (D<sub>j</sub>, D<sub>i</sub> + c<sub>ij</sub>) for all remaining nodes</center>
+
+Let us take an example, in the figure below, there is a topology of an AS.
+<center>
+
+<img src="images/example.jpg" alt="example">
+<figcaption><strong>Fig. 4 Link state example</strong></figcaption>
+
+</center><br>
+
+
+We will discuss how the shortest path tree for node A. First, we will initialize node A and set the shortest distance to its immediate neighbors.<br><center>
+
+<img src="images/Initialization.jpg" alt="">
+<figcaption><strong>Fig. 5 Initialization</strong></figcaption>
+</center><br>
+
+
+
+Among the two immediate neighbors of node A, we will add a node to the path that has the shortest distance i.e., node B with shortest distance 2.
+<center>
+
+<img src="images/Iteration-1.jpg" alt="Iteration 01">
+<figcaption><strong>Fig. 6 Routing table for node A after iteration 1</strong></figcaption>
+</center><br>
+
+
+Now search for the nodes that are not added to the path yet (C, D, E) and select the one with the shortest distance i.e., node D.
+<center>
+
+<img src="images/Iteration-2.jpg" alt="Iteration 02">
+<figcaption><strong>Fig. 7 Routing table for node A after iteration 2</strong></figcaption>
+</center><br>
+
+
+Now, nodes B and D that we added to the path were directly connected to root node A and were at the shortest distance as compared to any other path. Further, we have node E and node C which can be reached by node A through node B or through node D. Let us check out which path is shortest.
+<br>
+D<sub>j</sub> = minimum (D<sub>j</sub>, D<sub>i</sub> + c<sub>ij</sub>)<br>
+
+DE = minimum ((2+4) B, (3+5) D)<br>
+
+DE = minimum ((6) B, (8) D)<br>
+
+DE = 6<br>
+
+Here we will choose the path for node E through node B. <br>
+Similarly, we will calculate the shortest distance for node C.<br>
+
+DC = minimum (Dj, Di + cij)<br>
+
+DC = minimum ((2+5) B, (3+5+2+4) D)<br>
+
+DC = minimum ((7) B, (14) D)<br>
+
+DC = 7<br>
+
+Now, node E has the shortest distance so we will add node E to the path.
+
+<center>
+
+<img src="images/Iteration-3.jpg" alt="Iteration 03">
+<figcaption><strong>Fig. 8 Routing table for node A after iteration 3</strong></figcaption>
+</center><br>
+
+
+After adding node E to the path again explore the nodes that are not added to the path and there enlist their cost as the distance. Again select the node with the shortest distance so we will add node C to the path.
+<center>
+
+<img src="images/Iteration-4.jpg" alt="Iteration 04">
+<figcaption><strong>Fig. 9 Routing table for node A after iteration 4</strong></figcaption>
+</center><br>
+
+
+Now we are left with node F and node G. We will calculate the shortest distance for node F and G as we did for nodes E and C. Among F and G, the node with the shortest distance is node F. Therefore, we will update and add node F to the path.<br>
+<center>
+
+<img src="images/Iteration-5.jpg" alt="Iteration 05">
+<figcaption><strong>Fig. 10 Routing table for node A after iteration 5</strong></figcaption>
+</center><br>
+
+Additionally, the root node A can reach node G through node F with the shortest distance, i.e., 9. Therefore, we finally add node G.<br>
+
+<b>Creating Routing Table</b>
+
+Using the shortest path tree, each router generates a routing table consisting of three columns: destination, cost, and next router. The figure below displays a routing table for router A. Similarly, routing tables are created for all routers in the domain.
+
+<center>
+<img src="images/Routing-table-node-A.jpg" alt="Routing table node A">
+<figcaption><strong>Fig. 11 Routing table for node A</strong></figcaption>
+</center><br>
+
+
+<h3>Advantage of OSPF</h3>
+<ul>
+  <li>Unlimited hop counts.</li>
+  <li>Load balancing with equal-cost routes for the same destination.</li>
+</ul>
+
+<h3>Disadvantage of OSPF</h3>
+<ul>
+  <li>It is complex to configure and difficult to troubleshoot. In a large network, only experienced network administrators can configure it.</li>
+    <li>It needs lots of information to calculate the best route for each destination. To store this information, OSPF consumes more memory than other routing protocols.</li>
+  <li>It requires an extra CPU process to run the SPF algorithm.</li>
+</ul>
+
+
+</div>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+              <h4 align="center">Lab contributed by IITR, Roorkee</h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

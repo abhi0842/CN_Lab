@@ -1,0 +1,419 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  
+        <script>
+            window.onload = function () {
+                document.getElementById("pretest").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+        height: 50px;
+        width: 400px;"></span></a>
+    </div>
+   
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+        <p align="center" style="font-size:1em;"><b>Computer Network <!-- Write your lab name --> </b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network</a>
+              </li>
+              <li>
+                <a href="#">Line Encoding Schemes <!-- Write your experiment name --> </a>
+              </li>
+              <li class="active">Pre Test</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+            
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+               
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="contri">
+                    <a href="contributors.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>Contributors</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                  Implementation of Line Encoding Schemes <!-- Write experiment name here --> 
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:3%"> Pre Test </h3>
+                    <script>
+function result1() {
+    if (document.getElementById('q1').checked) {
+        document.getElementById('q1p').innerHTML = "Correct";
+        document.getElementById('q1p').style.color="green"
+        document.getElementById('q1p').style.fontSize="18px"
+        document.getElementById('q1p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q1p').innerHTML = "Wrong Answer, the correct option is A ";
+        document.getElementById('q1p').style.color="red"
+        document.getElementById('q1p').style.fontSize="18px"
+        document.getElementById('q1p').style.fontWeight="bold"
+
+
+    }
+
+    if (document.getElementById('q5').checked) {
+        document.getElementById('q2p').innerHTML = "Correct";
+        document.getElementById('q2p').style.color="green"
+        document.getElementById('q2p').style.fontSize="18px"
+        document.getElementById('q2p').style.fontWeight="bold"
+
+        
+    } else {
+        document.getElementById('q2p').innerHTML = "Wrong Answer, the correct option is A ";
+        document.getElementById('q2p').style.color="red"
+        document.getElementById('q2p').style.fontSize="18px"
+        document.getElementById('q2p').style.fontWeight="bold"
+
+    }
+
+    if (document.getElementById('q9').checked) {
+        document.getElementById('q3p').innerHTML = "Correct";
+        document.getElementById('q3p').style.color="green"
+        document.getElementById('q3p').style.fontSize="18px"
+        document.getElementById('q3p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q3p').innerHTML = "Wrong Answer, the correct option is C ";
+        document.getElementById('q3p').style.color="red"
+        document.getElementById('q3p').style.fontSize="18px"
+        document.getElementById('q3p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q13').checked) {
+        document.getElementById('q4p').innerHTML = "Correct";
+        document.getElementById('q4p').style.color="green"
+        document.getElementById('q4p').style.fontSize="18px"
+        document.getElementById('q4p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q4p').innerHTML = "Wrong Answer, the correct option is C ";
+        document.getElementById('q4p').style.color="red"
+        document.getElementById('q4p').style.fontSize="18px"
+        document.getElementById('q4p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q16').checked) {
+        document.getElementById('q5p').innerHTML = "Correct";
+        document.getElementById('q5p').style.color="green"
+        document.getElementById('q5p').style.fontSize="18px"
+        document.getElementById('q5p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q5p').innerHTML = "Wrong Answer, the correct option is B ";
+        document.getElementById('q5p').style.color="red"
+        document.getElementById('q5p').style.fontSize="18px"
+        document.getElementById('q5p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q19').checked) {
+        document.getElementById('q6p').innerHTML = "Correct";
+        document.getElementById('q6p').style.color="green"
+        document.getElementById('q6p').style.fontSize="18px"
+        document.getElementById('q6p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q6p').innerHTML = "Wrong Answer, the correct option is A ";
+        document.getElementById('q6p').style.color="red"
+        document.getElementById('q6p').style.fontSize="18px"
+        document.getElementById('q6p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q24').checked) {
+        document.getElementById('q7p').innerHTML = "Correct";
+        document.getElementById('q7p').style.color="green"
+        document.getElementById('q7p').style.fontSize="18px"
+        document.getElementById('q7p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q7p').innerHTML = "Wrong Answer, the correct option is B ";
+        document.getElementById('q7p').style.color="red"
+        document.getElementById('q7p').style.fontSize="18px"
+        document.getElementById('q7p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q30').checked) {
+        document.getElementById('q8p').innerHTML = "Correct";
+        document.getElementById('q8p').style.color="green"
+        document.getElementById('q8p').style.fontSize="18px"
+        document.getElementById('q8p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q8p').innerHTML = "Wrong Answer, the correct option is D ";
+        document.getElementById('q8p').style.color="red"
+        document.getElementById('q8p').style.fontSize="18px"
+        document.getElementById('q8p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q31').checked) {
+        document.getElementById('q9p').innerHTML = "Correct";
+        document.getElementById('q9p').style.color="green"
+        document.getElementById('q9p').style.fontSize="18px"
+        document.getElementById('q9p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q9p').innerHTML = "Wrong Answer, the correct option is A ";
+        document.getElementById('q9p').style.color="red"
+        document.getElementById('q9p').style.fontSize="18px"
+        document.getElementById('q9p').style.fontWeight="bold"
+
+    }
+    if (document.getElementById('q35').checked) {
+        document.getElementById('q10p').innerHTML = "Correct";
+        document.getElementById('q10p').style.color="green"
+        document.getElementById('q10p').style.fontSize="18px"
+        document.getElementById('q10p').style.fontWeight="bold"
+
+    } else {
+        document.getElementById('q10p').innerHTML = "Wrong Answer, the correct option is A ";
+        document.getElementById('q10p').style.color="red"
+        document.getElementById('q10p').style.fontSize="18px"
+        document.getElementById('q10p').style.fontWeight="bold"
+
+    }
+}
+
+
+                    </script>
+
+                    <ol style="font-size: 1.2em;margin-top:2%">
+
+                      <li>Unipolar RZ is a type of ______ encoding.</li>
+                      <input type="radio" id="q1" name="q1"> a. Line<br>
+                      <input type="radio" id="q2" name="q1"> b. Block<br>
+                      <input type="radio" id="q3" name="q1"> c. Scrambling<br>
+                      <input type="radio" id="q4" name="q1"> d. None of the above<br>
+                      <p id="q1p"></p>
+  
+                      <li>DC component is present in the encoded signal and there is loss of synchronization for long sequences of 0’s and 1’s in unipolar RZ.</li>
+                      <input type="radio" id="q5" name="q2"> a. True<br>
+                      <input type="radio" id="q6" name="q2"> b. False<br>
+                      <p id="q2p"></p>
+  
+                      <li>NRZ-L is a type of _____ line encoding.</li>
+                      <input type="radio" id="q7" name="q3"> a. Bipolar
+                      <br>
+                      <input type="radio" id="q8" name="q3"> b. Multitransition
+                      <br>
+                      <input type="radio" id="q9" name="q3p"> c. Polar<br>
+                      <input type="radio" id="q10" name="q43"> d. None of the above<br>
+                      <p id="q3p"></p>
+  
+                      <li>Which of the following is not a Polar line encoding scheme?</li>
+                      <input type="radio" id="q11" name="q4"> a. NRZ-I<br>
+                      <input type="radio" id="q12" name="q4"> b. NRZ-L<br>
+                      <input type="radio" id="q13" name="q4"> c. AMI<br>
+                      <input type="radio" id="q14" name="q4"> d. All of the above<br>
+                      <p id="q4p"></p>
+  
+                      <li>Manchester encoding is a combination of which two line encoding schemes.</li>
+                      <input type="radio" id="q15" name="q5"> a. NRZ-L and RZ
+                      <br>
+                      <input type="radio" id="q16" name="q5"> b. NRZ-I and RZ
+                      <br>
+                      <input type="radio" id="q17" name="q5"> c. NRZ-L and AMI<br>
+                      <input type="radio" id="q18" name="q5"> d. None of the above
+                      <br>
+                      <p id="q5p"></p>
+
+                      <li>The ________ represents the number of bits sent per second, whereas the ______ defines the number of signal elements per second in the signal.</li>
+                      <input type="radio" id="q19" name="q6"> a. bit rate, baud rate
+                      <br>
+                      <input type="radio" id="q20" name="q6"> b. baud rate , bit rate
+                      <br>
+                      <input type="radio" id="q21" name="q6"> c. Both are same<br>
+                      <input type="radio" id="q22" name="q6"> d. None of the above
+                      <br>
+                      <p id="q6p"></p>
+
+                      <li>In which line encoding scheme 0 bit is represented by Zero level and binary 1 is represented by alternating positive and negative voltages.</li>
+                      <input type="radio" id="q23" name="q7"> a. NRZ-I
+                      <br>
+                      <input type="radio" id="q24" name="q7"> b. AMI
+                      <br>
+                      <input type="radio" id="q25" name="q7"> c. Pseudoternary<br>
+                      <input type="radio" id="q26" name="q7"> d. All of the above
+                      <br>
+                      <p id="q7p"></p>
+
+                      <li>In Pseudoternary line encoding<br>
+                        Statement 1: 0 bit is represented by Zero level. <br> 
+                        Statement 2: Binary 1 is represented by alternating positive and negative voltages.  
+                        <br>
+                        Which of the above are true.
+                      </li>
+                      <input type="radio" id="q27" name="q8"> a. Statement 1 is true and Statement 2 is false
+                      <br>
+                      <input type="radio" id="q28" name="q8"> b. Statement 1 is false and Statement 2 is true
+                      <br>
+                      <input type="radio" id="q29" name="q8"> c. Both are true<br>
+                      <input type="radio" id="q30" name="q8"> d. Both are false
+                      <br>
+                      <p id="q8p"></p>
+
+                      <li>The polarities in NRZ format use?</li>
+                      <input type="radio" id="q31" name="q9"> a. Complete pulse duration
+                      <br>
+                      <input type="radio" id="q32" name="q9"> b. Half duration
+                      <br>
+                      <input type="radio" id="q33" name="q9"> c. Both positive as well as negative value<br>
+                      <input type="radio" id="q34" name="q9"> d. Each pulse is used for twice the duration
+                      <br>
+                      <p id="q9p"></p>
+
+                      <li>How many levels does manchester line encoding involve?</li>
+                      <input type="radio" id="q35" name="q10"> a. Two levels with inversion in the middle of each bit
+                      <br>
+                      <input type="radio" id="q36" name="q10"> b. Three levels with inversion in the middle of each bit
+                      <br>
+                      <input type="radio" id="q37" name="q10"> c. Two levels without inversion in the middle of each bit<br>
+                      <input type="radio" id="q38" name="q10"> d. Three levels without inversion in the middle of each bit
+                      <br>
+                      <p id="q10p"></p>
+
+                  </ol>
+                  <button id="result" onclick="result1();this.disabled=true;" type="submit" class="btn btn-primary">Submit</button>
+  
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+              <h4 align="center">Lab contributed by IITR, Roorkee</h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

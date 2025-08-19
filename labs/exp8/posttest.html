@@ -1,0 +1,432 @@
+
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title> Virtual Labs </title>
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <!-- Bootstrap 3.3.6 -->
+      <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+      <style>
+            
+        .quiz {
+          padding: 0px 0px 0px 0px;
+          width: 85%;
+          
+          margin: 0 auto;
+        }
+        .quiz ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .quiz-question {
+          font-weight: 600;
+          display: block;
+          padding: 30px 20px 10px 20px;
+          margin: 0;
+        }
+        .quiz-answer {
+          margin: 0;
+          padding: 10px 20px 10px 20px;
+          background: #f7f7f7;
+          margin-bottom: 5px;
+          cursor: pointer;
+        }
+        .quiz-answer:hover {
+          background: #eee;
+        }
+        .quiz-answer:before {
+          content: "";
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 1px solid #ccc;
+          background: #fff;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        .quiz-answer.active:before {
+          background-color: #333;
+          border-color: #333;
+        }
+        .quiz-answer.correct:before {
+          background-color: green;
+          border-color: green;
+        }
+        .quiz-answer.incorrect:before {
+          background-color: red;
+          border-color: red;
+        }
+        .quiz-answer.active.correct:before {
+          outline: 2px solid green;
+          outline-offset: 2px;
+        }
+        .quiz-result {
+          max-width: 960px;
+          margin: 0 auto;
+          font-weight: bold;
+          text-align: center;
+          color: #fff;
+          padding: 0px;
+        }
+        .quiz-result.good {
+          background: green;
+        }
+        .quiz-result.mid {
+          background: orange;
+        }
+        .quiz-result.bad {
+          background: red;
+        }
+        </style>
+        <script>
+          window.console = window.console || function(t) {};
+        </script>
+        <script>
+          if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+          }
+        </script>
+  </head>
+
+  <body class="hold-transition skin-blue sidebar-mini">
+      <!--Navigation Bar-->
+<div class="navbar navbar-default">
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+      height: 50px;
+      width: 400px;"></span></a>
+  </div>
+ 
+</div>
+</div>
+      <div class="wrapper">
+        <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo" style="
+      background-color: #009dff;
+      border-right: solid;
+      border-right-color: #1261a0;
+    ">
+  <p align="center" style="font-size: 1em; color: white">
+    <b>Computer Network</b>
+  </p>
+</a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href=""><i class="fa fa-dashboard"></i>Computer Networks<!-- Write your lab name --></a>
+            </li>
+            <li>
+              <a href="#">Network Devices<!-- Write your experiment name --></a>
+            </li>
+            <li class="active">Post test</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+             
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+              <li class="treeview">
+                  <a href="aim.html">
+                      <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                  </a>
+              </li>
+              <li class="treeview">
+                  <a href="theory.html">
+                      <i class="fa fa-files-o"></i>
+                      <span>Theory</span>
+                  </a>
+              </li>
+              <li class="treeview">
+                  <a href="pretest.html">
+                      <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                  </a>
+              </li>
+              
+              <li class="treeview">
+                  <a href="procedure.html">
+                      <i class="fa fa-files-o"></i> <span>Procedure</span>
+                  </a>
+              </li>
+              <li class="treeview">
+                  <a href="simulation.html">
+                      <i class="fa fa-laptop"></i>
+                      <span>Simulation</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+
+              
+              <li class="active treeview">
+                  <a href="posttest.html">
+                      <i class="fa fa-files-o"></i>
+                      <span>Post Test</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+              <li class="treeview">
+                  <a href="references.html">
+                      <i class="fa fa-files-o"></i>
+                      <span>References</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+              <li class="treeview" id="contri">
+                <a href="contributors.html">
+                    <i class="fa fa-files-o"></i>
+                    <span>Contributors</span>
+                    <span class="pull-right-container">
+                    </span>
+                </a>
+            </li>
+          </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+             <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+              <section class="content-header">
+              <h1 align="center">
+                <b>Demonstration of the functioning of Network Devices used for establishing communication among the computer/networks</b>
+              </h1>
+              </section>
+                  <!-- Main content -->
+                  <section class="content">
+                  <h3 style="margin-top:3%">Post Test</h3>
+                  
+                  <p style="font-size:130%; margin-top:2%">
+
+                  <!--Pre Test of experiment -->
+                  
+                  <script>
+             
+                    function result() {
+           if (document.getElementById('q12').checked) {
+               document.getElementById('q1c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q1w').innerHTML = "Wrong Answer, the correct option is B ";
+       
+           }
+       
+           if (document.getElementById('q22').checked) {
+               document.getElementById('q2c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q2w').innerHTML = "Wrong Answer, the correct option is B ";
+       
+           }
+       
+           if (document.getElementById('q31').checked) {
+               document.getElementById('q3c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q3w').innerHTML = "Wrong Answer, the correct option is A ";
+       
+           }
+           if (document.getElementById('q41').checked) {
+               document.getElementById('q4c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q4w').innerHTML = "Wrong Answer, the correct option is A ";
+       
+           }
+           if (document.getElementById('q52').checked) {
+               document.getElementById('q5c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q5w').innerHTML = "Wrong Answer, the correct option is B ";
+       
+           }
+           if (document.getElementById('q64').checked) {
+               document.getElementById('q6c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q6w').innerHTML = "Wrong Answer, the correct option is D ";
+       
+           }
+       
+           if (document.getElementById('q72').checked) {
+               document.getElementById('q7c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q7w').innerHTML = "Wrong Answer, the correct option is B ";
+       
+           }
+       
+           if (document.getElementById('q82').checked) {
+               document.getElementById('q8c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q8w').innerHTML = "Wrong Answer, the correct option is B ";
+       
+           }
+       
+           if (document.getElementById('q91').checked) {
+               document.getElementById('q9c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q9w').innerHTML = "Wrong Answer, the correct option is A ";
+       
+           }
+       
+           if (document.getElementById('q101').checked) {
+               document.getElementById('q10c').innerHTML = "Correct";
+           } else {
+               document.getElementById('q10w').innerHTML = "Wrong Answer, the correct option is A ";
+       
+           }
+       
+       }
+
+                   </script>
+                   
+                   <ol style="font-size: 1.2em;text-align: justify;margin-top:2%">
+                     <li>Software or Hardware used to prevent unauthorized access to a network?</li>
+                     <input type="radio" id="q11" name="q1" value="a"> a. Hub<br>
+                     <input type="radio" id="q12" name="q1" value="b"> b. Firewall<br>
+                     <input type="radio" id="q13" name="q1" value="c"> c. Switch<br>
+                     <input type="radio" id="q14" name="q1" value="d"> d. Network Driver<br>
+                     <p id="q1c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                     <p id="q1w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                     <li>What is an important piece of computer hardware that is necessary for a computer to connect to a network?</li>
+                     <input type="radio" id="q21" name="q2" value="1"> a. Proxy
+                     <br>
+                     <input type="radio" id="q22" name="q2" value="2"> b. Network Interface Card<br>
+                     <input type="radio" id="q23" name="q2" value="2"> c. Switch<br>
+                     <input type="radio" id="q24" name="q2" value="2"> d. Bridge<br>
+         
+                     <p id="q2c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                     <p id="q2w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                     <li>Which devices sole purpose is to strengthen and retransmit the signal it receives?</li>
+                     <input type="radio" id="q31" name="q3" value="1"> a. Repeater<br>
+                     <input type="radio" id="q32" name="q3" value="2"> b. Bridge<br>
+                     <input type="radio" id="q33" name="q3" value="3"> c. Modem<br>
+                     <input type="radio" id="q34" name="q3" value="4"> d. Gateway<br>
+                     <p id="q3c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                     <p id="q3w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                     <li>Packets in the data link layer are also called Frames.</li>
+                     <input type="radio" id="q41" name="q4" value="1"> a. True<br>
+                     <input type="radio" id="q42" name="q4" value="2"> b. False<br>
+                     <p id="q4c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                     <p id="q4w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                     <li>Which one of the following network devices has only two ports?</li>
+                     <input type="radio" id="q51" name="q5"> a. Router<br>
+                     <input type="radio" id="q52" name="q5"> b. Bridge<br>
+                     <input type="radio" id="q53" name="q5"> c. Both a and b<br>
+                     <input type="radio" id="q54" name="q5"> d. None of the above<br>
+                               <p id="q5c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                               <p id="q5w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                     <li>Which layer is responsible for converting data packets from the Data Link layer into electrical signals?</li>
+                      <input type="radio" id="q61" name="q6"> a. Data Link Layer<br>
+                      <input type="radio" id="q62" name="q6"> b. Network Layer<br>
+                      <input type="radio" id="q63" name="q6"> c. Transport Layer<br>
+                      <input type="radio" id="q64" name="q6"> d. Physical Layer<br>
+                      <p id="q6c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                      <p id="q6w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                   <li>How many types of routers are there?</li>
+                   <input type="radio" id="q71" name="q7"> a. 1<br>
+                   <input type="radio" id="q72" name="q7"> b. 2<br>
+                   <input type="radio" id="q73" name="q7"> c. 3<br>
+                   <input type="radio" id="q74" name="q7"> d. 4<br>
+                   <p id="q7c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                   <p id="q7w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                   <li>Which one of the following divides the larger networks into smaller networks or smaller sections?</li>
+                   <input type="radio" id="q81" name="q8"> a. Repeater<br>
+                   <input type="radio" id="q82" name="q8"> b. Bridge<br>
+                   <input type="radio" id="q83" name="q8"> c. Hub<br>
+                   <input type="radio" id="q84" name="q8"> d. Gateway<br>
+                   <p id="q8c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                   <p id="q8w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                   <li>Which one of the following network devices is the broadcast device?
+                   </li>
+                   <input type="radio" id="q91" name="q9"> a. Hub<br>
+                   <input type="radio" id="q92" name="q9"> b. Repeater<br>
+                   <input type="radio" id="q93" name="q9"> c. Both a and b<br>
+                   <input type="radio" id="q94" name="q9"> d. None of the above
+                   <br>
+                   <p id="q9c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                   <p id="q9w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                   <li> Which one of the following bridge services is connectionless?
+                   </li>
+                   <input type="radio" id="q101" name="q10"> a. Transparent bridge<br>
+                   <input type="radio" id="q102" name="q10"> b. Source routing bridge<br>
+                   <input type="radio" id="q103" name="q10"> c. Both a and b<br>
+                   <input type="radio" id="q104" name="q10"> d. None of the above<br>
+                   <p id="q10c" style="color:green; font-size:18px; font-weight:bold;"></p>
+                   <p id="q10w" style="color:red; font-size:18px; font-weight:bold;"></p>
+       
+                   <button id="result" onclick="result();this.disabled=true;" type="submit" class="btn btn-primary">Submit</button>
+
+                 
+                 </ol>
+                 
+      
+  
+                  
+        
+                  </p>
+              </section>
+          <!-- /.content -->
+          </div>
+          <!-- /.content-wrapper -->
+<footer class="main-footer">
+<h4 align="center">Lab contributed by IITR, Roorkee </h4>
+</footer>
+<!-- /.control-sidebar -->        </div>
+  </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Virtual Labs - A MHRD Govt of india Initiative">
+    <meta name="author" content="Virtual Labs - A MHRD Govt of india Initiative">
+    
+    <title>Welcome to Virtual Labs - A MHRD Govt of india Initiative</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/drop.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vlabs-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+
+</head>
+
+     
+        <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+            <div class="box">
+         
+              <div id="myDropdown" class="dropdown-content">
+                <p style="text-align:justify;line-height: 1.5"><b>Follow these steps:</b><br><br>
+                  <b>1. </b>In the Simulation Frame, select the Source MAC Address and the Destinaton MAC Address.<br>
+                  <b>2. </b>To begin the simulation, click the <b>'Start Simulation'</b> button.<br>
+                  <b>3. </b>To simulate again, first click the <b>'Reset'</b> button.<br> 
+                  <B>4. </B>Try out the other devices just by clicking on the dropdown visible at the top stating Choose a Network Device.<br>
+                  <b>5. </b>If you want to exit the simulation just close the tab.<br>
+                </p>
+              </div>
+
+              <script>
+                 function myFunction() {
+        console.log("check");
+       document.getElementById("myDropdown").classList.toggle("show");
+       }
+            </script>
+    
+          
+ 
+            <section class="content">
+                <br>
+                <section class = "content-header">
+                   <div id = "con">
+    
+                    <script>
+                    function switchExp(){
+                       let selInd = parseInt(document.querySelector('#exps').value);
+                       if (selInd == 1){                           
+                            window.location.replace('index.html');
+                        }
+                        else if (selInd == 2){
+                            window.location.replace('switch.html');
+                        }
+                        else if (selInd == 3){
+                            window.location.replace('router.html');
+                        }
+                        else if (selInd == 4){
+                            window.location.replace('bridge.html');
+                        }
+                    }
+                  </script>
+                
+                  <label for="exps">Choose a Network Device :&nbsp;</label>
+                  <select name="exps" id="exps" onchange="switchExp()">
+                      <option type="button" value="1" selected>Hub</option>
+                      <option type="button" value="2" >Switch</option>
+                      <option type="button" value="3" >Router</option>
+                      <option type="button" value="4" >Bridge</option>
+                  </select>
+                     
+                        </div>
+                        <br>
+                        
+              <h1 align="center">
+               Demo of Hub
+            </h1></section>
+
+    <iframe src="hubsimu.html"  frameborder="1" width=1150px height=660px ></iframe>
+    <button type="button" id="con-button" onclick="myFunction()">INSTRUCTIONS</button>
+    
+
+     
+                
+
+            </section>
+        </div>        
+           
+        <footer class="vlabs-footer">    
+            &#169; Copyright 2022 Virtual Labs, IIT Roorkee
+</footer>
+
+    
+    </body></html>

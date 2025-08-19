@@ -1,0 +1,397 @@
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="css/_all-skins.min.css">
+        <!-- Simulation scripts start-->
+        <link rel="stylesheet" href="css/static.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
+          <script src="js/math.ob.js"></script>
+
+          <script src="js/numcheck.ob.js"></script>
+          <script src="js/canvasjschart.ob.js"></script>
+          <script src="js/bracket.ob.js"></script>
+          <link href="css/StyleSheet1.css" rel="stylesheet" />
+          
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+        <script>
+            window.onload = function () {
+                document.getElementById("simulation").className = "active treeview";
+            }
+        </script>
+         <script type="text/javascript">
+            // Popup window code
+                                  function newPopup(url) {
+                                    popupWindow = window.open(url,'popUpWindow','height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+                                  }
+          </script>
+    <!-- Simulation scripts end-->
+    <style>
+body {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+      
+}
+
+.box{	  
+    position: absolute;
+        width: 1380px;
+        height: 810px;
+        border: 3px solid black;
+        background-color: #e3f6f5;
+        
+    } 
+    .ins{
+        position: absolute;
+right:5%;
+top:40px;
+        border-radius: 6px;
+        font-size: 18px;
+    }
+.ins:hover {
+ background-color: #bae8e8;
+ color: #000;
+ align-content: center;
+}
+.ins:hover a{
+ color: #000;
+}
+
+
+button:hover{
+    background-color: #bae8e8;
+  color: black !important;
+}
+button:hover a{
+    background-color: #bae8e8;
+  color: #000 !important;
+}
+
+button{
+    background-color: #ffd803;
+    
+}
+.dropdown-content {
+          display:none;
+          position: absolute;
+          margin-left:78%;
+          margin-top: 8%;
+          background-color: white;
+          width: 280px;
+          height: 420px;
+          border:4px;
+          border-radius: 4px;
+          padding: 10px;
+          font-family: sans-serif;
+          font-size: 15px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,1,1);
+          z-index: 1;
+    
+        }
+        .dropdown-content p:hover {background-color: #e3f6f5}
+        .show {display:block;}
+        
+            .block{
+                display: none;
+            }
+.logo{
+    height: 100px; 
+    width: 160px;
+     margin-left: 10px;
+  
+    display: inline-block;
+}
+
+</style>
+<style>
+    
+
+
+    @media screen and (min-width:2500px){
+        footer{
+            position: absolute;
+            width: 1380px;
+            top:830px;
+        }
+    }
+
+   
+    </style>
+</head>
+<body>
+    <!-- modal content -->
+   <div class="box">
+      <div id="myDropdown" class="dropdown-content">
+        <p style="text-align:justify;line-height: 1.5"><b>Follow these steps:</b><br>
+         
+          <b>1. </b>Click on New Graph button.<br>
+          <b>2. </b>After new graph is added, complete the table manually (entries in upper case) and click the <b>Check</b> button.<br>
+          <b>3. </b>For adding an extra edge specify the source and destination along with the weight to connect the two nodes and click the <b>Submit</b> button.<br> 
+          <b>4. </b>As new edges are added, update the table accordingly and click the <b>Check</b> button again.<br>
+          <b>5. </b>For sending the data packet, provide the source node and destination node in the space provided and click the <b>Send Message</b> button.<br>
+          <b>6. </b>The best path will be chosen and displayed using red lines.
+       </p>
+      </div>
+
+
+<div>
+    <h1 style="text-align: center; margin-bottom: 30px; margin-top: 30px;">Static Routing</h1>
+    <button class="ins"  onclick="myFunction()">INSTRUCTIONS</button>
+</div>
+   
+    <div class="row" id="roww">
+        <div class="col-lg-2 col-xl-12 c1">
+            <button style="border: 2px black solid;"  class="btn btn-dark" onclick="f()" >New Graph</button>
+            <button style="border: 2px black solid;margin-left:15px"  class="btn btn-dark" onclick=window.location.reload() >Reset</button><br>
+            <div style="margin-top: 30px;" >
+              <h3>Add edge</h3>
+              <input placeholder="Source Node" class="input1 ss4"><br>
+              <input placeholder="Destination Node" class="input2 ss2"><br>
+              <input placeholder="Weight" type="number" maxlength = "2"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="input3 ss3"><br>
+              <button type="submit" style="border: 2px black solid; margin-top: 10px;" id="submit" disabled class="btn btn-outline-secondary" onclick="update()">Submit</button>
+            </div>
+
+            <div style="margin-top: 50px;">
+                <h3 >Send packet</h3>
+                   <input placeholder="Source Node"  class="input4"><br>
+                  <input placeholder="Destination Node" class="input5"><br>
+                  <button type="submit" style=" border: 2px black solid; margin-top: 10px;"   class="btn btn-light" id="cell1" disabled onclick="dim()">Send Message</button>
+              </div>
+       
+            </div>
+        <div class="col-lg-8 col-xl-12 c2">
+         
+    <canvas id="canvas" width="750" height="450" style="border:2px solid black;background-color: #fffffe; overflow: scroll;"></canvas>
+    <span id="boot-icon" class="bi bi-dot" style="position:absolute;font-size: 10rem; color: rgb(0, 128, 55);visibility: hidden;"></span>
+        </div>
+
+        <div class="col-lg-2 col-xl-12 c3"  >
+        
+            
+        
+        </div>
+        
+    </div>
+   
+  
+       <div class="row">
+           <div class="col-lg-1"></div>
+           <div class="col-lg-2" align="center" style=" justify-content: center;display: flex;">
+            <table align="center">
+                <tr>
+                    <th style="text-align: center; border-bottom:1px solid black ; margin-bottom: 0;" colspan="3">Table of A</th>
+                </tr>
+                <tr>
+                    <th style="border-right:1px solid black;">Nodes</th>
+                    <th style="border-right:1px solid black;">Dist.</th>
+                    <th>Next.N</th>
+                </tr>
+                <tr>
+                    <td ><input id="ta11" value="A" readonly="readonly" size="1"></td>
+                    <td ><input id="ta12" size="1" value="0" readonly="readonly" ></td>
+                    <td ><input id="ta13" size="1" value="A" readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td><input id="ta21" value="B" readonly="readonly" size="1"></td>
+                    <td><input id="ta22" size="1"></td>
+                    <td><input id="ta23" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="ta31" value="C" readonly="readonly" size="1"></td>
+                    <td><input id="ta32" size="1"></td>
+                    <td><input id="ta33" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="ta41" value="D" readonly="readonly" size="1"></td>
+                    <td><input  id="ta42" size="1"></td>
+                    <td><input id="ta43" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="ta51" value="E" readonly="readonly" size="1"></td>
+                    <td><input id="ta52" size="1"></td>
+                    <td><input id="ta53" size="1"></td>
+                </tr>
+            </table>
+           </div>
+           <div class="col-lg-2" align="center" style=" justify-content: center;display: flex;">
+            <table id="statictable2">
+                <tr>
+                    <th style="text-align: center; border-bottom:1px solid black ; margin-bottom: 0; "colspan="3">Table of B</th>
+                </tr>
+                <tr>
+                    <th style="border-right:1px solid black;">Nodes</th>
+                    <th style="border-right:1px solid black;">Dist.</th>
+                    <th>Next.N</th>
+                </tr>
+                <tr>
+                    <td><input id="tb11"  value="A" readonly="readonly" size="1"></td>
+                    <td><input id="tb12"  size="1"></td>
+                    <td><input id="tb13"  size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="tb21" value="B" readonly="readonly" size="1"></td>
+                    <td><input id="tb22" size="1" value="0"  readonly="readonly"></td>
+                    <td><input id="tb23" size="1" value="B"  readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td><input id="tb31" value="C" readonly="readonly" size="1"></td>
+                    <td><input id="tb32" size="1"></td>
+                    <td><input id="tb33" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="tb41" value="D" readonly="readonly" size="1"></td>
+                    <td><input id="tb42" size="1"></td>
+                    <td><input id="tb43" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="tb51" value="E" readonly="readonly" size="1"></td>
+                    <td><input id="tb52" size="1"></td>
+                    <td><input id="tb53" size="1"></td>
+                </tr>
+            </table>
+           </div>
+           <div class="col-lg-2" align="center" style=" justify-content: center;display: flex;">
+            <table id="statictable3">
+                <tr>
+                    <th  style="text-align: center; border-bottom:1px solid black ; margin-bottom: 0;" colspan="3">Table of C</th>
+                </tr>
+                <tr>
+                    <th style="border-right:1px solid black;">Nodes</th>
+                    <th style="border-right:1px solid black;">Dist.</th>
+                    <th>Next.N</th>
+                </tr>
+                <tr>
+                    <td><input id="tc11" value="A" readonly="readonly" size="1"></td>
+                    <td><input id="tc12" size="1"></td>
+                    <td><input id="tc13" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="tc21" value="B" readonly="readonly" size="1"></td>
+                    <td><input id="tc22" size="1"></td>
+                    <td><input id="tc23" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="tc31" value="C" readonly="readonly" size="1"></td>
+                    <td><input id="tc32" size="1" value="0"  readonly="readonly"></td>
+                    <td><input id="tc33" size="1" value="C"  readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td><input id="tc41" value="D" readonly="readonly" size="1"></td>
+                    <td><input id="tc42" size="1"></td>
+                    <td><input id="tc43" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="tc51" value="E" readonly="readonly" size="1"></td>
+                    <td><input id="tc52" size="1"></td>
+                    <td><input id="tc53" size="1"></td>
+                </tr>
+            </table>
+           </div>
+           <div class="col-lg-2" align="center" style=" justify-content: center;display: flex;">
+            <table>
+                <tr>
+                    <th  style="text-align: center; border-bottom:1px solid black ; margin-bottom: 0;" colspan="3">Table of D</th>
+                </tr>
+                <tr>
+                    <th style="border-right:1px solid black;" >Nodes</th>
+                    <th style="border-right:1px solid black;" >Dist.</th>
+                    <th>Next.N</th>
+                </tr>
+                <tr>
+                    <td><input id="td11" value="A" readonly="readonly" size="1"></td>
+                    <td><input id="td12" size="1"></td>
+                    <td><input id="td13" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td21" value="B" readonly="readonly" size="1"></td>
+                    <td><input id="td22" size="1"></td>
+                    <td><input id="td23" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td31" value="C" readonly="readonly" size="1"></td>
+                    <td><input id="td32" size="1"></td>
+                    <td><input id="td33" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td41" value="D" readonly="readonly" size="1"></td>
+                    <td><input id="td42" size="1" value="0"  readonly="readonly" ></td>
+                    <td><input id="td43" size="1"value="D"  readonly="readonly"></td>
+                </tr>
+                <tr>
+                    <td><input id="td51" value="E" readonly="readonly" size="1"></td>
+                    <td><input id="td52" size="1"></td>
+                    <td><input id="td53" size="1"></td>
+                </tr>
+            </table>
+           </div>
+           <div class="col-lg-2" align="center" style=" justify-content: center;display: flex;">
+            <table id="statictable5">
+                <tr>
+                    <th  style="text-align: center; border-bottom:1px solid black ; margin-bottom: 0;"  colspan="3">Table of E</th>
+                </tr>
+                <tr>
+                    <th style="border-right:1px solid black;">Nodes</th>
+                    <th style="border-right:1px solid black;" >Dist.</th>
+                    <th>Next.N</th>
+                </tr>
+                <tr>
+                    <td><input id="te11" value="A" readonly="readonly" size="1"></td>
+                    <td><input id="te12" size="1"></td>
+                    <td><input id="te13" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="te21" value="B" readonly="readonly" size="1"></td>
+                    <td><input id="te22" size="1"></td>
+                    <td><input id="te23" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="te31" value="C" readonly="readonly" size="1"></td>
+                    <td><input id="te32" size="1"></td>
+                    <td><input id="te33" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="te41" value="D" readonly="readonly" size="1"></td>
+                    <td><input id="te42" size="1"></td>
+                    <td><input id="te43" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="te51" value="E" readonly="readonly" size="1"></td>
+                    <td><input id="te52" size="1" value="0"  readonly="readonly" ></td>
+                    <td><input id="te53" size="1" value="E"  readonly="readonly"></td>
+                </tr>
+            </table>
+           </div>
+           <div class="col-lg-1">
+            <button type="submit" style=" border: 2px black solid; margin-top: 120px;"  class="btn btn-light" id="check" disabled onclick="t()">Check</button>
+           </div>
+       </div>
+    </div>
+
+    <footer style="background-color: black;position: absolute;  width: 1380px;top:809px;">
+        <div style="color:white ; text-align: center; font-family: 'Raleway', sans-serif; font-size: 18px;">&copy; Copyright 2022 Virtual Labs, IIT Roorkee</div>
+    </footer>
+
+    <script src="js/static.js"></script>
+    <script>
+        function myFunction() {
+        console.log("check");
+       document.getElementById("myDropdown").classList.toggle("show");
+       }
+      
+        </script>
+    
+      
+</body>
+</html>

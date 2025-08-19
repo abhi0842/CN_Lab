@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="main-box " id="main-boxs">
+
+        <!-- the modal -->
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-left: -52px;">INSTRUCTIONS</h2>
+                </div>
+                <div class="modal-body">
+                    <ol style="line-height:1.5em; padding: 10px;text-align: justify;font-size: larger;">
+                        <li>Click on the <b>Start</b> button.</li>
+                        <li>Initiate a request by selecting the <b>sender</b> and <b>receiver</b>, then click
+                            <b>Submit</b>.</li>
+                        <li>Now, observe the three phases of circuit switching:<b> connection establishment</b>, <b>data
+                                transmission</b>, and <b>connection termination</b>.</li>
+                        <li>Please repeat steps <b>1 to 3 </b> to understand different scenarios.</li>
+                    </ol>
+
+                    <p style="font-size: 20px; line-height:1.5em;text-align: justify;">
+                        <b style="color: blue;">Note 1: </b>Move the cursor over the devices to view their
+                        information.<br>
+                        <b style="color: blue;">Note 2: </b>P1, P2, etc. indicate port numbers in the switch device.<br>
+                        <b style="color: blue;">Note 3: </b>The color code along the line indicates:
+                    <div style="display: flex;flex-direction: row;justify-content: space-evenly;gap:25px">
+                        <div class="label-row">
+                            <div class="color-dot blue"></div>
+                            <span>Signal Propagation</span>
+                        </div>
+                        <div class="label-row">
+                            <div class="color-dot green"></div>
+                            <span>Acknowledgement</span>
+                        </div>
+                        <div class="label-row">
+                            <div class="color-dot red"></div>
+                            <span>Signal Terminate</span>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <h3> </h3>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="header">
+            <div style="text-align:left;">
+                <span style="margin-left: 10px;">
+                    CIRCUIT SWITCHING
+                </span>
+            </div>
+            <div style="text-align:right;">
+                <span id="myBtn" style="margin-right: 20px;cursor: pointer;">
+                    INSTRUCTIONS
+                </span>
+            </div>
+        </div>
+
+        <div class="main-body">
+
+            <!-- sender side -->
+            <div class="pics">
+                <div>
+                    <img class="senderImage" id="D1" src="images/laptop.png" alt="laptop">
+                    <figcaption>Device 1</figcaption>
+                    <img class="packet" id="P1" src="images/new-email.png" alt="laptop">
+
+                </div>
+                <div>
+                    <img class="senderImage" id="D2" src="images/computer.png" alt="computer">
+                    <figcaption>Device 2</figcaption>
+                    <img class="packet" id="P2" src="images/new-email.png" alt="computer">
+                </div>
+                <div>
+                    <img class="senderImage" id="D3" src="images/phone.png" alt="phone">
+                    <figcaption>Device 3</figcaption>
+                    <img class="packet" id="P3" src="images/new-email.png" alt="phone">
+                </div>
+            </div>
+            <div class="lines">
+                <div id="d1_s1">
+                    <hr id="hr1">
+                    <p style="position: absolute;margin-left: 160px;margin-top: -5px;color:crimson">P1</p>
+                </div>
+
+                <div id="d2_s3">
+                    <hr id="hr2">
+                    <p style="position: absolute;margin-left: 340px;margin-top: -30px;color:crimson">P2</p>
+                </div>
+
+                <div id="d3_s2">
+                    <hr id="hr3">
+                    <p style="position: absolute;margin-left: 170px;margin-top: -30px;color:crimson">P1</p>
+                </div>
+
+            </div>
+
+
+            <!-- switches -->
+            <div class="mainSwitch">
+
+                <div style="width:100%;position: relative;height: auto;text-align: center;">
+                    <h2 id="phase" style="top:50px;position: relative;color: blue;visibility: hidden;">Phase 1:
+                        Connection Establishment</h2>
+                </div>
+
+                <!-- switch1 -->
+                <div class="switch1">
+
+                    <div class="s1">
+                        <figcaption>Switch 1</figcaption>
+                        <img id="s_img_1" src="images/switch.png" width="58%">
+                    </div>
+
+                    <div class="s2">
+                        <figcaption>Switch 2</figcaption>
+                        <img id="s_img_2" src="images/switch.png" width="58%">
+
+                    </div>
+                </div>
+                <!-- switch2 -->
+                <div class="switch2">
+                    <div>
+                        <div id="s1_s3">
+                            <hr id="hr4">
+                            <p style="position: absolute;margin-left: -120px;margin-top: -10px;color:crimson">P5</p>
+                            <p style="position: absolute;margin-left: 95px;margin-top: -10px;color:crimson">P1</p>
+                        </div>
+                        <div id="s3_s4">
+                            <hr id="hr5">
+                            <p style="position: absolute;margin-left: -100px;margin-top: -10px;color:crimson">P4</p>
+                            <p style="position: absolute;margin-left: 120px;margin-top: -10px;color:crimson">P1</p>
+                        </div>
+
+                    </div>
+                    <div class="s4">
+                        <figcaption>Switch 3</figcaption>
+                        <img id="s_img_3" src="images/switch-3.png" width="58%">
+
+                    </div>
+                    <div>
+                        <div id="s2_s3">
+                            <hr id="hr6">
+                            <p style="position: absolute;margin-left: -120px;margin-top: 40px;color:crimson">P5</p>
+                            <p style="position: absolute;margin-left: 110px;margin-top: 40px;color:crimson">P3</p>
+                        </div>
+                        <div id="s3_s5">
+                            <hr id="hr7">
+                            <p style="position: absolute;margin-left: -100px;margin-top: 40px;color:crimson">P6</p>
+                            <p style="position: absolute;margin-left: 130px;margin-top: 40px;color:crimson">P1</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- switch3 -->
+                <div class="switch3">
+                    <div class="s6">
+                        <figcaption>Switch 4</figcaption>
+                        <img id="s_img_4" src="images/switch.png" width="58%">
+
+                    </div>
+                    <div class="s7">
+                        <figcaption>Switch 5</figcaption>
+                        <img id="s_img_5" src="images/switch.png" width="58%">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lines">
+
+                <div id="s4_d4">
+                    <hr id="hr8">
+                    <p style="position: absolute;margin-left: 10px;margin-top:-30px;color:crimson">P5</p>
+                </div>
+
+                <div id="s3_d5">
+                    <hr id="hr9">
+                    <p style="position: absolute;margin-left: 10px;margin-top:-30px;color:crimson">P5</p>
+                </div>
+
+                <div id="s5_d6">
+                    <hr id="hr10">
+                    <p style="position: absolute;margin-left: 0px;margin-top:-30px;color:crimson;">P5</p>
+                </div>
+
+
+            </div>
+
+            <!-- receiever -->
+            <div class="pic1">
+                <div>
+                    <img class="receiever" id="D4" src="images/laptop.png" alt="laptop">
+                    <figcaption>Device 4</figcaption>
+                    <img class="packet" id="P4" src="images/new-email.png" alt="laptop">
+                </div>
+                <div>
+                    <img class="receiever" id="D5" src="images/computer.png" alt="computer">
+                    <figcaption>Device 5</figcaption>
+                    <img class="packet" id="P5" src="images/new-email.png" alt="laptop">
+                </div>
+                <div>
+                    <img class="receiever" id="D6" src="images/phone.png" alt="phone">
+                    <figcaption>Device 6</figcaption>
+                    <img class="packet" id="P6" src="images/new-email.png" alt="laptop">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button_div">
+
+            <button onclick="start()" id="start">START</button>
+            <button onclick="window.location.reload()">RESET</button>
+            <button onclick="window.print()">PRINT</button>
+
+        </div>
+
+        <div class="footer">
+            <footer>
+                <p>
+                    &copy;2025, Virtual Lab, IIT Roorkee
+                </p>
+            </footer>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
+
+</body>
+
+</html>

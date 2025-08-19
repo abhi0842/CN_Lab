@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <link href="css/boot.css" rel="stylesheet">
+       
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="css/bootstr.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+        
+</head>
+<body>
+    <div id = "men">
+        <form action="simulation.html">
+            <br><br>
+            <!-- <button type="button" class="btn btn-secondary btn-lg" onclick="location.href='simulation.html'">Router</button> -->
+        </form>
+    </div> 
+    
+    <div class="flex-container">
+      <button id='button1' class="res" onclick="reload()" >Reset</button>
+        <button id='button2' class="sim" onclick="myMove()" >Start simulation</button>
+        <script>
+            function check() {
+                  if (document.getElementById('pl1').checked) {
+                     document.getElementById('p1').disabled = true;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p4').disabled = false;
+                     document.getElementById('p5').disabled = false;
+                     document.getElementById('p6').disabled = false;
+                     
+                  }
+                  else if(document.getElementById('pl2').checked) {
+                     document.getElementById('p2').disabled = true;
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p4').disabled = false;
+                     document.getElementById('p5').disabled = false;
+                     document.getElementById('p6').disabled = false;
+                     
+                  }
+                  else if(document.getElementById('pl3').checked) {
+                     document.getElementById('p3').disabled = true;
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p4').disabled = false;
+                     document.getElementById('p5').disabled = false;
+                     document.getElementById('p6').disabled = false;
+                    
+                  }
+                  else if(document.getElementById('pl4').checked) {
+                     document.getElementById('p4').disabled = true;
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p5').disabled = false;
+                     document.getElementById('p6').disabled = false;
+                    
+                  }
+                  else if(document.getElementById('pl5').checked) {
+                     document.getElementById('p5').disabled = true;
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p4').disabled = false;
+                     document.getElementById('p6').disabled = false;
+                    
+                  }
+                  else if(document.getElementById('pl6').checked) {
+                     document.getElementById('p6').disabled = true;
+                     document.getElementById('p1').disabled = false;
+                     document.getElementById('p2').disabled = false;
+                     document.getElementById('p3').disabled = false;
+                     document.getElementById('p4').disabled = false;
+                     document.getElementById('p5').disabled = false;
+                    
+                  }     
+               }
+               function unchecked1()
+                        {
+                            document.getElementById('p1').checked=false;
+                        }
+                        function unchecked2()
+                        {document.getElementById('p2').checked=false;}
+                        function unchecked3()
+                        {document.getElementById('p3').checked=false;}
+                        function unchecked4()
+                        {document.getElementById('p4').checked=false;}
+                        function unchecked5()
+                        {document.getElementById('p5').checked=false;}
+                        function unchecked6()
+                        {document.getElementById('p6').checked=false;}
+                           
+         </script>
+        <label class="wm1" for="">Select Source IP Address</label>
+        <label class="wm2" for="">Select Destination IP Address</label>
+        <label class="rc1" for="">192.168.1.15</label>
+        <label class="rc2" for="">192.168.1.16</label>
+        <label class="rc3" for="">192.168.1.17</label>
+        <label class="rc4" for="">192.134.2.1</label>
+        <label class="rc5" for="">192.134.2.2</label>
+        <label class="rc6" for="">192.134.2.3</label>
+
+        <input type="radio" id="p1" class="w1" name="" value="1" ondblclick="unchecked1()">
+        <input type="radio" id="p2" class="w2" name="" value="1" ondblclick="unchecked2()">      
+        <input type="radio" id="p3" class="w3" name="" value="1" ondblclick="unchecked3()">
+        <input type="radio" id="p4" class="w4" name="" value="1" ondblclick="unchecked4()">
+        <input type="radio" id="p5" class="w5" name="" value="1" ondblclick="unchecked5()">
+        <input type="radio" id="p6" class="w6" name="" value="1" ondblclick="unchecked6()">
+
+        <input type="radio" id="pl1" class="wr1" name="sou" value="1" onchange="check()">
+        <input type="radio" id="pl2" class="wr2" name="sou" value="1" onchange="check()">    
+        <input type="radio" id="pl3" class="wr3" name="sou" value="1" onchange="check()">
+        <input type="radio" id="pl4" class="wr4" name="sou" value="1" onchange="check()">
+        <input type="radio" id="pl5" class="wr5" name="sou" value="1" onchange="check()">
+        <input type="radio" id="pl6" class="wr6" name="sou" value="1" onchange="check()">
+        <label class="wrl1" for="">192.168.1.15</label>
+        <label class="wrl2" for="">192.168.1.16</label>
+        <label class="wrl3" for="">192.168.1.17</label>
+        <label class="wrl4" for="">192.134.2.1</label>
+        <label class="wrl5" for="">192.134.2.2</label>
+        <label class="wrl6" for="">192.134.2.3</label>
+        <label class="wrr1" for="">192.168.1.15</label>
+        <label class="wrr2" for="">192.168.1.16</label>
+        <label class="wrr3" for="">192.168.1.17</label>
+        <label class="wrr4" for="">192.134.2.1</label>
+        <label class="wrr5" for="">192.134.2.2</label>
+        <label class="wrr6" for="">192.134.2.3</label>
+        <!-- <input type="radio" id="p1" class="wrapper1" name="" value="1">
+        <input type="radio" id="p2" class="wrapper2" name="" value="1">
+        <input type="radio" id="p3" class="wrapper3" name="" value="1">
+        <input type="radio" id="p4" class="wrapper4" name="" value="1">
+        <input type="radio" id="p5" class="wrapper5" name="" value="1"> -->
+        <span class="w3-xxlarge"><i id="net" class="far fa-envelope glyphicon"></i></span>
+         
+        <span class="w3-xxlarge wrapper"><i id="net10" class="far fa-envelope glyphicon"></i></span>
+         <span class="w3-xxlarge wrapper"><i id="net9" class="far fa-envelope glyphicon"></i></span>
+         <span class="w3-xxlarge wrapper"><i id="net1" class="far fa-envelope glyphicon"></i></span>
+          <span class="w3-xxlarge wrapper"><i id="net2" class="far fa-envelope glyphicon"></i></span>
+           <span class="w3-xxlarge wrapper"><i id="net3" class="far fa-envelope glyphicon"></i></span>
+           <span class="w3-xxlarge wrapper"><i id="net4" class="far fa-envelope glyphicon"></i></span>
+           <span class="w3-xxlarge wrapper"><i id="net5" class="far fa-envelope glyphicon"></i></span>
+
+        <img id = "capture" src="images/arouter.PNG" alt="" width="650" height="600" style="margin-left: 280px;
+        margin-bottom: 10px ;">
+        
+
+        <div id="msg1" class="bulb1">
+         <b>Properties of Router: </b><br>
+        1. Router can be attached to multiple network.<br>
+        2. It works on Physical,Data Link,Network Layer.<br>
+        3. It always check MAC address as well as IP address.<br>
+        4. It detects the route through routing table.<br>
+        5. It uses store and forward technique to avoid collision.   
+        </div>
+        
+    </div>
+
+    <script src="js/router.js"></script>
+           
+    
+    
+</body>
+</html>

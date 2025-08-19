@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script>
+            window.onload = function () {
+                document.getElementById("theory").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="../images/iitrLogo.png" style="    margin-top: -15px;
+        height: 50px;
+        width: 400px;"></span></a>
+    </div>
+   
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo" style="
+        background-color: #009dff;
+        border-right: solid;
+        border-right-color: #1261a0;
+      ">
+    <p align="center" style="font-size: 1em; color: white">
+      <b>Computer Network</b>
+    </p>
+  </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Network</a>
+              </li>
+              <li>
+                <a href="#"> Static Routing</a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+            
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+              
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="contri">
+                  <a href="contributors.html">
+                      <i class="fa fa-files-o"></i>
+                      <span>Contributors</span>
+                      <span class="pull-right-container">
+                      </span>
+                  </a>
+              </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                  Implementation of Static Routing Protocol <!-- Write experiment name here --> 
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                
+                    <h3 style="margin-top:3%"  id="introduction">Introduction</h3>
+                    <div style="text-align:justify;font-size: 1.2em;">
+                    Routing protocols, according to the OSI routing framework, are layer management protocols for the network layer that specify how routers communicate with each other to distribute information and data that helps them to select routes between any two nodes on a computer network. Data packets are forwarded through the networks of the internet from one router to the other router until they reach their destination computer. Each router has a prior knowledge only of networks(nodes) attached to it directly. A routing protocol shares this information first among it’s immediate neighbours, and then throughout the network.<br>
+                    There are various algorithms used for this, some of them discussed in our simulation are:<br>
+                    <br>
+                    <center>                  
+                    <img src="images/routing1.png" alt="routing"> 
+                    <figcaption> <strong>Fig. 1 Types of routing</strong></figcaption>
+                    </center><br>
+                    
+                    
+                    <H3>Static Routing:</H3>
+                    
+                    Static routing is a form of routing that is used when a router uses a manually-configured routing entry, rather than information that gets updated dynamically(automatically). Unlike dynamic routing, static routes remain fixed and do not show any changes if the network is changed or if it is reconfigured. Static routing and dynamic routing can be found not to mutually exclusive. Both dynamic routing and static routing can be used on a router to maximize routing efficiency and to provide backups in the cases that dynamic routing information fails to be automatically updated.
+                    
+                    <h4>Uses</h4>
+                    The different uses of static routing are as follows: <br>
+                    <ul>
+                      <li>It is used to define an exit point from a router when no other routes are available which is called as a default route. </li>
+                      <li>It is used for small networks like having one or two routes. This is often more efficient because a link is not being wasted by exchanging dynamic routing information.</li>
+                      <li>It is often used as a complement to dynamic routing to provide a backup if a dynamic route is unavailable.</li>
+                      <li>It is used to help transfer routing information from one routing protocol to another.</li>
+                    </ul>
+                    
+
+                    <h4>Advantages</h4>
+                    <ul>
+                      <li>Static routing keeps a little load on the CPU of the router and produces no traffic to other routers.</li>
+                      <li>It adds security because an only administrator can allow routing to particular networks only. </li>
+                      <li>No bandwidth usage between routers.</li>
+                    </ul>
+                    
+
+                    <h4>Disadvantages</h4>
+                    <ul>
+                      <li>Static routes are manually configured by the administrator, so there may be a chance of mistakes in human entry.</li>
+                      <li>Static routing is not fault tolerant.</li>
+                      <li>Static routes may prevent routing protocols from working as intended. A solution is to manually modify the administrative distance.</li>
+                      <li>Static route configuration takes a long time if there are many routers. The reconfiguration can also be slow and inefficient.</li>
+                    </ul>
+                    
+
+                    </div>
+                  
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+              <h4 align="center">Lab contributed by IITR, Roorkee</h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>
